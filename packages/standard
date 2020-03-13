@@ -1,0 +1,57 @@
+## applications
+arduino
+blender
+cantata
+gimp
+gnome-tweaks
+hplip-gui
+lutris
+prusa-slicer
+vlc
+wine
+
+## command-line
+asciiquarium
+cmatrix
+cmus
+cowsay
+fortune-mod
+htop
+lolcat
+lsd
+ncmpcpp
+neofetch
+ranger
+sl
+vifm
+vim
+zsh
+
+## software development kits/tools
+# java
+java-1.8.0-openjdk-devel
+java-1.8.0-openjdk-headless
+java-1.8.0-openjdk-openjfx
+java-1.8.0-openjdk-openjfx-devel
+
+java-11-openjdk-devel
+java-11-openjdk-headless
+
+java-latest-openjdk-devel
+java-latest-openjdk-headless
+
+# c/c++
+gcc
+gcc-c++
+
+## miscellaneous
+exfat-utils
+hplip
+hplip-common
+hplip-libs
+texlive
+tlp
+tor
+torsocks
+
+fontawesome-fonts
