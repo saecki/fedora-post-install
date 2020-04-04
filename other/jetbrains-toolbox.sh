@@ -2,7 +2,8 @@ wget -cO jetbrains-toolbox.tar.gz "https://data.services.jetbrains.com/products/
 tar -xzf jetbrains-toolbox.tar.gz
 DIR=$(find . -maxdepth 1 -type d -name jetbrains-toolbox-\* -print | head -n1)
 cd $DIR
-./jetbrains-toolbox
+./jetbrains-toolbox &
+sleep 5
 cd ..
 rm -r $DIR
 rm jetbrains-toolbox.tar.gz
