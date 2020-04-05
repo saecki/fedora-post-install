@@ -62,7 +62,7 @@ for file in packages/*
 	    fi
 	done < $file
 
-	echo -en "\ninstalling $file:"
+	echo -e "\ninstalling $file:"
 	dnf install $packages
 	
 	packages=""
