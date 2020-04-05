@@ -10,6 +10,6 @@ A post install script for fedora.
 
 ```.pkglst``` for a list of packages that will be installed.  
 
-## other
+## scripts
 
 ```.sh``` extensions for shell scripts that will be executed.  

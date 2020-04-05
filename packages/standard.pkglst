@@ -19,6 +19,7 @@ cmus
 cowsay
 fortune-mod
 htop
+jq
 lolcat
 ncmpcpp
 neofetch
@@ -45,7 +46,7 @@ java-latest-openjdk-headless
 gcc
 gcc-c++
 
-## libs
+## st libs
 libX11-devel
 libXft-devel
 

@@ -51,10 +51,10 @@ for file in packages/*; do
     fi
 done
 
-# other
-echo -e "\n## Other ##"
+# scripts
+echo -e "\n## Scripts ##"
 
-for file in other/*; do
+for file in scripts/*; do
     if [[ $file == *.sh ]]; then
 	echo -e "\nexecuting $file:"
 	sh $file
