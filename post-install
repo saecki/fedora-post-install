@@ -10,6 +10,10 @@ read INSTALL_USER
 
 export INSTALL_USER=$INSTALL_USER
 
+# update
+echo -e "\n## Update ##"
+dnf upgrade --refresh
+
 # repos
 echo -e "\n## Repos ##"
 
