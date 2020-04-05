@@ -45,8 +45,13 @@ java-latest-openjdk-headless
 gcc
 gcc-c++
 
+## libs
+libX11-devel
+libXft-devel
+
 ## miscellaneous
 exfat-utils
+fontawesome-fonts
 hplip
 hplip-common
 hplip-libs
@@ -55,4 +60,3 @@ tlp
 tor
 torsocks
 
-fontawesome-fonts
