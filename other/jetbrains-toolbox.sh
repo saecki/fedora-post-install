@@ -4,6 +4,7 @@ DIR=$(find . -maxdepth 1 -type d -name jetbrains-toolbox-\* -print | head -n1)
 cd $DIR
 ./jetbrains-toolbox &
 sleep 5
+killall jetbrains-toolbox
 cd ..
 rm -r $DIR
 rm jetbrains-toolbox.tar.gz

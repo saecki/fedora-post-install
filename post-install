@@ -1,8 +1,6 @@
 #!/bin/sh
 
-if [[ $USER != "root" ]]
-    then
-    
+if [[ $USER != "root" ]]; then
     echo "this script is required to be run as root"
     exit 0
 fi
@@ -15,24 +13,15 @@ export INSTALL_USER=$INSTALL_USER
 # repos
 echo -e "\n## Repos ##"
 
-for file in repos/*
-    do
-
-    if [[ $file == *.repo ]]
-	then
-	
+for file in repos/*; do
+    if [[ $file == *.repo ]]; then
 	echo -e "\ncopying $file to /etc/yum.repos.d/"
 	cp repos/* /etc/yum.repos.d/
     fi
 
-    if [[ $file == *.install ]]
-	then
-	
-	while read line
-	    do
-	    
-	    if [[ $line != "" ]] && [[ $line != "#"* ]]
-		then
+    if [[ $file == *.install ]]; then
+	while read line; do
+	    if [[ $line != "" ]] && [[ $line != "#"* ]]; then
 		packages=$packages" $line"
 	    fi
 	done < $file
@@ -47,17 +36,10 @@ done
 # packages
 echo -e "\n## Packages ##"
 
-for file in packages/*
-    do
-    
-    if [[ $file == *.pkglst ]]
-	then
-	
-	while read line
-	    do
-	    
-	    if [[ $line != "" ]] && [[ $line != "#"* ]]
-		then
+for file in packages/*; do
+    if [[ $file == *.pkglst ]]; then
+	while read line; do
+	    if [[ $line != "" ]] && [[ $line != "#"* ]]; then
 		packages=$packages" $line"
 	    fi
 	done < $file
@@ -72,12 +54,8 @@ done
 # other
 echo -e "\n## Other ##"
 
-for file in other/*
-    do
-
-    if [[ $file == *.sh ]]
-	then
-	
+for file in other/*; do
+    if [[ $file == *.sh ]]; then
 	echo -e "\nexecuting $file:"
 	sh $file
     fi
