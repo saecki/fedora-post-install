@@ -9,6 +9,7 @@ A post install script for fedora.
 ## packages
 
 ```.pkglst``` for a list of packages that will be installed.  
+```.grplst``` for a list of package groups that will be installed.  
 
 ## scripts
 

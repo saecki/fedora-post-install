@@ -53,6 +53,19 @@ for file in packages/*; do
 	
 	packages=""
     fi
+
+    if [[ $file == *.grplst ]]; then
+	while read line; do
+	    if [[ $line != "" ]] && [[ $line != "#"* ]]; then
+		packages=$packages" $line"
+	    fi
+	done < $file
+
+	echo -e "\ninstalling $file:"
+	dnf group install $packages
+	
+	packages=""
+    fi
 done
 
 # scripts
