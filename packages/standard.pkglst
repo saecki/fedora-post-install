@@ -54,12 +54,20 @@ java-latest-openjdk-headless
 # python
 python3
 python3-pip
+python3-devel
+
+# go
+go
+
+# node
+npm
 
 ## st libs
 libX11-devel
 libXft-devel
 
 ## miscellaneous
+cmake
 exfat-utils
 fontawesome-fonts
 hplip
