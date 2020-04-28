@@ -21,12 +21,14 @@ cowsay
 dconf
 figlet
 fortune-mod
+git-subtree
 htop
 jq
 lolcat
 ncdu
 ncmpcpp
 neofetch
+neovim
 ranger
 sl
 vifm
