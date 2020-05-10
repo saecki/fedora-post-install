@@ -57,7 +57,7 @@ python3-pip
 python3-devel
 
 # go
-go
+golang
 
 # node
 npm
@@ -70,10 +70,13 @@ libXft-devel
 cmake
 exfat-utils
 fontawesome-fonts
+fontconfig-devel
+freetype-devel
 hplip
 hplip-common
 hplip-libs
 kernel-devel
+libxcb-devel
 texlive
 tlp
 tor
