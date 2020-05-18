@@ -66,6 +66,9 @@ npm
 libX11-devel
 libXft-devel
 
+## gtk
+gtk3-devel
+
 ## miscellaneous
 cmake
 exfat-utils
