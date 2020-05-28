@@ -1,6 +1,19 @@
-sudo -Hu $INSTALL_USER git clone https://github.com/saecki/playlist_localizer.git 
-cd playlist_localizer
-sudo -Hu $INSTALL_USER /home/$INSTALL_USER/.cargo/bin/cargo build --release 
-cp target/release/playlist_localizer /usr/local/bin
-cd ..
-rm -rf playlist_localizer
+#!/bin/sh
+
+src_path="$HOME/IdeaProjects/playlist_localizer"
+
+install() {
+    git clone https://github.com/saecki/playlist_localizer.git $src_path
+}
+
+update() {
+    git -C $src_path pull origin master
+}
+
+while getopts "iu" opt; do
+    case "$opt" in 
+	i ) install;;
+	u ) update;;
+    esac
+done
+

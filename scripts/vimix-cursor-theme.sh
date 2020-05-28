@@ -1,7 +1,23 @@
-git clone https://github.com/vinceliuice/Vimix-cursors.git
-cd Vimix-cursors
-./install.sh
-cd ..
-rm -rf Vimix-cursors
+#!/bin/sh
 
-sudo -Hu $INSTALL_USER DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u $INSTALL_USER)/bus gsettings set org.gnome.desktop.interface cursor-theme Vimix-white-cursors
+install() {
+    dl_dir=$(mktemp -d)
+
+    git clone https://github.com/vinceliuice/Vimix-cursors.git "$dl_dir/Vimix-cursors"
+    sudo $dl_dir/Vimix-cursors/install.sh
+    rm -rf $dl_dir
+
+    gsettings set org.gnome.desktop.interface cursor-theme Vimix-white-cursors
+}
+
+update() {
+    install
+}
+
+while getopts "iu" opt; do
+    case "$opt" in 
+	i ) install;;
+	u ) update;;
+    esac
+done
+

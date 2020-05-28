@@ -1,18 +1,8 @@
 #!/bin/sh
 
-if [[ $USER != "root" ]]; then
-    echo "this script is required to be run as root"
-    exit 0
-fi
-
-echo -n "install user:"
-read INSTALL_USER
-
-export INSTALL_USER=$INSTALL_USER
-
 # update
 echo -e "\n## Update ##"
-dnf upgrade --refresh
+sudo dnf upgrade --refresh -y
 
 # repos
 echo -e "\n## Repos ##"
@@ -20,7 +10,7 @@ echo -e "\n## Repos ##"
 for file in repos/*; do
     if [[ $file == *.repo ]]; then
 	echo -e "\ncopying $file to /etc/yum.repos.d/"
-	cp repos/* /etc/yum.repos.d/
+	sudo cp repos/* /etc/yum.repos.d/
     fi
 
     if [[ $file == *.install ]]; then
@@ -31,7 +21,7 @@ for file in repos/*; do
 	done < $file
 
 	echo -e "\ninstalling repo $file:"
-	dnf install $packages
+	sudo dnf install -y $packages
 
 	packages=""
     fi
@@ -49,7 +39,7 @@ for file in packages/*; do
 	done < $file
 
 	echo -e "\ninstalling $file:"
-	dnf install $packages
+	sudo dnf install -y $packages
 	
 	packages=""
     fi
@@ -62,7 +52,7 @@ for file in packages/*; do
 	done < $file
 
 	echo -e "\ninstalling $file:"
-	dnf group install $packages
+	sudo dnf group install -y $packages
 	
 	packages=""
     fi
@@ -74,8 +64,8 @@ echo -e "\n## Scripts ##"
 for file in scripts/*; do
     if [[ $file == *.sh ]]; then
 	echo -e "\nexecuting $file:"
-	sh $file
+	$file -i
     fi
 done
 
-echo -e "\nall done you should be good to go"
+echo -e "\nall done, you should be good to go!"

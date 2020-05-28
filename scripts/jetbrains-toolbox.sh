@@ -1,10 +1,27 @@
-wget -cO jetbrains-toolbox.tar.gz "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA"
-tar -xzf jetbrains-toolbox.tar.gz
-DIR=$(find . -maxdepth 1 -type d -name jetbrains-toolbox-\* -print | head -n1)
-cd $DIR
-./jetbrains-toolbox &
-sleep 5
-killall jetbrains-toolbox
-cd ..
-rm -r $DIR
-rm jetbrains-toolbox.tar.gz
+#!/bin/sh
+
+install() {
+    dl_dir=$(mkdtemp -d)
+
+    wget -O "$dl_dir/jetbrains-toolbox.tar.gz" "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA"
+    tar -xzf "$dl_dir/jetbrains-toolbox.tar.gz" -C $dl_dir
+    DIR=$(find $dl_dir -maxdepth 1 -type d -name jetbrains-toolbox-\* -print | head -n1)
+
+    $DIR/jetbrains-toolbox &
+    sleep 5
+    killall jetbrains-toolbox
+    
+    rm -rf $dl_dir
+}
+
+update() {
+    echo "let toolbox update itself"
+}
+
+while getopts "iu" opt; do
+    case "$opt" in 
+	i ) install;;
+	u ) update;;
+    esac
+done
+

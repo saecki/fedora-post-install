@@ -1,11 +1,11 @@
 #!/bin/sh
 
 install() {
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo "No install action defined"
 }
 
 update() {
-    upgrade_oh_my_zsh
+    echo "No update action defined"
 }
 
 while getopts "iu" opt; do

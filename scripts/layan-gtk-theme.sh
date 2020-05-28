@@ -1,7 +1,24 @@
-git clone https://github/com/vinceliuice/Layan-gtk-theme.git
-Layan-gtk-theme/install.sh
-rm -rf Layan-gtk-theme
+#!/bin/sh
 
-sudo -Hu $INSTALL_USER DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u $INSTALL_USER)/bus gsettings set org.gnome.desktop.interface gtk-theme Layan-dark-solid
-sudo -Hu $INSTALL_USER DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u $INSTALL_USER)/bus gsettings set org.gnome.shell.extensions.user-theme name Layan-dark-solid
+install() {
+    dl_dir=$(mktemp -d)
+
+    git clone https://github/com/vinceliuice/Layan-gtk-theme.git "$dl_dir/Layan-gtk-theme"
+    sudo $dl_dir/Layan-gtk-theme/install.sh
+    rm -rf $dl_dir
+
+    gsettings set org.gnome.desktop.interface gtk-theme Layan-dark-solid
+    gsettings set org.gnome.shell.extensions.user-theme name Layan-dark-solid
+}
+
+update() {
+    install
+}
+
+while getopts "iu" opt; do
+    case "$opt" in 
+	i ) install;;
+	u ) update;;
+    esac
+done
 
