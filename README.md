@@ -13,5 +13,5 @@ A post install script for fedora.
 
 ## scripts
 
-```.sh``` extensions for shell scripts that will be executed.
-They usually should accept -i flags for initial installation and -u flags for updating.
+```.sh``` extensions for shell scripts that will be executed.  
+They usually should accept ```-i``` flags for initial installation and ```-u``` flags for updating.
