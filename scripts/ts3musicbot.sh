@@ -3,7 +3,7 @@
 install_dir="/usr/local/src/ts3musicbot-git"
 
 install() {
-    sudo git clone https://github/com/vinceliuice/Layan-gtk-theme.git $install_dir
+    sudo git clone https://github.com/saecki/ts3musicbot-git $install_dir
     sudo pip3 install -r "$install_dir/requirements.txt"
 }
 
