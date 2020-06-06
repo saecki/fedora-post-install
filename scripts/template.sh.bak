@@ -8,10 +8,4 @@ update() {
     echo "No update action defined"
 }
 
-while getopts "iu" opt; do
-    case "$opt" in 
-	i ) install;;
-	u ) update;;
-    esac
-done
-
+. ../util/manage.sh

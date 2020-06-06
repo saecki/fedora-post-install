@@ -12,9 +12,4 @@ update() {
     sudo pip3 install -r "$install_dir/requirements.txt"
 }
 
-while getopts "iu" opt; do
-    case "$opt" in 
-	i ) install;;
-	u ) update;;
-    esac
-done
+. ../util/manage.sh

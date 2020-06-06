@@ -10,10 +10,4 @@ update() {
     sudo git --work-tree=/usr/local/bin/ --git-dir=/usr/local/bin/.scripts checkout -f
 }
 
-while getopts "iu" opt; do
-    case "$opt" in 
-	i ) install;;
-	u ) update;;
-    esac
-done
-
+. ../util/manage.sh

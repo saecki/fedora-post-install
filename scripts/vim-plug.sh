@@ -9,10 +9,4 @@ update() {
     echo "Run PlugUpgrade from within vim to update vim-plug"
 }
 
-while getopts "iu" opt; do
-    case "$opt" in 
-	i ) install;;
-	u ) update;;
-    esac
-done
-
+. ../util/manage.sh

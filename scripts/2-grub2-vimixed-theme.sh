@@ -9,10 +9,4 @@ update() {
     sudo git -C /boot/grub2/themes/vimixed pull origin master
 }
 
-while getopts "iu" opt; do
-    case "$opt" in 
-	i ) install;;
-	u ) update;;
-    esac
-done
-
+. ../util/manage.sh

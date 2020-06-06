@@ -1,19 +1,31 @@
-
 #!/bin/sh
+
+compile() {
+    $HOME/.cargo/bin/cargo build \
+	--manifest-path=$HOME/Documents/IdeaProjects/alacritty/Cargo.toml \
+	--release
+
+    sudo cp \
+	$HOME/Documents/IdeaProjects/alacritty/target/release/alacritty \
+	/usr/local/bin/
+}
 
 install() {
     git clone https://github.com/alacritty/alacritty.git $HOME/Documents/IdeaProjects/alacritty
 
-    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:\
-	/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/ \
-	name 'launch-terminal'
-    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:\
-	/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/ \
-	command 'alacritty -t "magic box"'
-    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:\
-	/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/ \
-	binding '<Super>Return'
+    compile
 
+    if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
+	executable="/usr/local/bin/alacritty-wayland"
+    else
+	executable="/usr/local/bin/alacritty"
+    fi
+
+    sudo /usr/local/bin/create-desktop-file \
+	-e $executable \
+	-n Alacritty \
+	-g Alacritty
+    
     oldkeybindings=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
 
     commas="${oldkeybindings//[^\']}"
@@ -27,16 +39,16 @@ install() {
 
     keybindings="$oldkeybindings'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/']"
     gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "$keybindings"
+
+    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/ name "'launch-terminal'"
+    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/ command "'$executable -t \"magic box\"'"
+    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/ binding "'<Super>Return'"
 }
 
 update() {
     git -C $HOME/Documents/IdeaProjects/alacritty pull origin master
+    
+    compile
 }
 
-while getopts "iu" opt; do
-    case "$opt" in 
-	i ) install;;
-	u ) update;;
-    esac
-done
-
+. ../util/manage.sh

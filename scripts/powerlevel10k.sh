@@ -9,10 +9,4 @@ update() {
     git -C $HOME/.oh-my-zsh/custom/themes/powerlevel10k pull
 }
 
-while getopts "iu" opt; do
-    case "$opt" in 
-	i ) install;;
-	u ) update;;
-    esac
-done
-
+. ../util/manage.sh

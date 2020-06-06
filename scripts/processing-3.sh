@@ -23,10 +23,4 @@ update() {
     echo "Update the version number and reinstall"
 }
 
-while getopts "iu" opt; do
-    case "$opt" in 
-	i ) install;;
-	u ) update;;
-    esac
-done
-
+. ../util/manage.sh
