@@ -1,9 +1,5 @@
 #!/bin/sh
 
-help() {
-    echo "Use the -i flag to install or -u to update."
-}
-
 while getopts "iuh" opt; do
     case "$opt" in 
 	i ) install; exit;;
@@ -11,4 +7,4 @@ while getopts "iuh" opt; do
     esac
 done
 
-help
+echo "Use the -i flag to install or -u to update."
