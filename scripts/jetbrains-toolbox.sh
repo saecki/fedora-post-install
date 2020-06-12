@@ -1,7 +1,7 @@
 #!/bin/sh
 
 install() {
-    dl_dir=$(mkdtemp -d)
+    dl_dir=$(mktemp -d)
 
     wget -O "$dl_dir/jetbrains-toolbox.tar.gz" "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA"
     tar -xzf "$dl_dir/jetbrains-toolbox.tar.gz" -C $dl_dir
