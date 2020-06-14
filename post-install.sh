@@ -119,11 +119,10 @@ update() {
 
 #!/bin/sh
 
-while getopts "isuh" opt; do
+while getopts "iuh" opt; do
     case "$opt" in 
 	i ) install; exit;;
 	u ) update; exit;;
-	s ) settings; exit;;
     esac
 done
 

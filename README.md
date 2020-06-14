@@ -15,3 +15,6 @@ A post install script for fedora.
 
 ```.sh``` extensions for shell scripts that will be executed.  
 They usually should accept ```-i``` flags for initial installation and ```-u``` flags for updating.
+
+## settings
+```.gsettings``` extensions for gsettings schemas with key value pairs that will be set using gsettings.
