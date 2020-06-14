@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 repos() {
     for file in repos/*; do
@@ -59,8 +59,6 @@ scripts_install() {
 	    $file -i
 	fi
     done
-
-    echo -e "\nall done, you should be good to go!"
 } 
 
 scripts_update() {
@@ -70,12 +68,25 @@ scripts_update() {
 	    $file -u
 	fi
     done
-
-    echo -e "\nall done, you should be good to go!"
 } 
 
+settings() {
+    for file in settings/*; do
+	if [[ $file == *.gsettings ]]; then
+	    echo -e "\napplying settings from $file:"
+	    
+	    while read line; do
+		if [[ $line != "" ]] && [[ $line != "#"* ]]; then
+		    gsettings set $line
+		fi
+	    done < $file
+
+	fi
+    done
+}
+
 install() {
-    # update
+    # updat
     echo -e "\n## Update ##"
     sudo dnf upgrade --refresh -y
 
@@ -90,6 +101,10 @@ install() {
     # scripts
     echo -e "\n## Scripts ##"
     scripts_install
+
+    # settings
+    echo -e "\n## Settings ##"
+    settings
 }
 
 update() {
@@ -102,4 +117,14 @@ update() {
     scripts_update
 }
 
-. util/manage.sh
+#!/bin/sh
+
+while getopts "isuh" opt; do
+    case "$opt" in 
+	i ) install; exit;;
+	u ) update; exit;;
+	s ) settings; exit;;
+    esac
+done
+
+echo "Use the -i flag to install or -u to update."
