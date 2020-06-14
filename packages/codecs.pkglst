@@ -1,0 +1,17 @@
+# fedora
+gstreamer-plugins-espeak.x86_64
+gstreamer1-plugins-bad-free.x86_64
+gstreamer1-plugins-base.i686
+gstreamer1-plugins-base.x86_64
+gstreamer1-plugins-good-gtk.x86_64
+gstreamer1-plugins-good-qt.x86_64
+gstreamer1-plugins-good.x86_64
+gstreamer1-plugins-ugly-free.x86_64
+gstreamer1-vaapi.x86_64
+gstreamer1.i686
+gstreamer1.x86_64
+
+# rpmfusion-free
+gstreamer1-libav.x86_64
+gstreamer1-plugins-bad-freeworld.x86_64
+gstreamer1-plugins-ugly.x86_64
