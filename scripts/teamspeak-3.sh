@@ -38,7 +38,7 @@ install() {
 }
 
 update() {
-    echo "Let discord update itself or reinstall it"
+    echo "Let teamspeak update itself or reinstall it"
 }
 
 . ../util/manage.sh
