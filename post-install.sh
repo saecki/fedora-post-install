@@ -86,7 +86,7 @@ settings() {
 }
 
 install() {
-    # updat
+    # update
     echo -e "\n## Update ##"
     sudo dnf upgrade --refresh -y
 
@@ -119,8 +119,11 @@ update() {
 
 #!/bin/sh
 
-while getopts "iuh" opt; do
+while getopts "hiprsu" opt; do
     case "$opt" in 
+	r ) repos; exit;;
+	p ) packages; exit;;
+	s ) settings; exit;;
 	i ) install; exit;;
 	u ) update; exit;;
     esac
