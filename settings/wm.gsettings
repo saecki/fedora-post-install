@@ -30,6 +30,7 @@ org.gnome.desktop.wm.keybindings switch-windows-backward ['<Shift><Alt>Tab']
 
 # Miscellaneous
 org.gnome.desktop.wm.keybindings close ['<Shift><Super>q']
+org.gnome.desktop.wm.keybindings minimize ['<Super>q']
 org.gnome.desktop.wm.keybindings begin-resize ['<Shift><Super>r']
 org.gnome.desktop.wm.keybindings begin-move ['<Shift><Super>m']
 org.gnome.desktop.wm.keybindings show-desktop ['<Super>d']
