@@ -35,4 +35,4 @@ org.gnome.desktop.wm.keybindings begin-resize ['<Shift><Super>r']
 org.gnome.desktop.wm.keybindings begin-move ['<Shift><Super>m']
 org.gnome.desktop.wm.keybindings show-desktop ['<Super>d']
 
-org.gnome.settings-daemon.plugins.media-keys screensaver ['<Super>c']
+org.gnome.settings-daemon.plugins.media-keys screensaver ['<Super>Escape']
