@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 repos() {
     for file in repos/*; do
@@ -18,6 +18,16 @@ repos() {
 	    sudo dnf install -y $packages
 
 	    packages=""
+	fi
+	
+	if [[ $file == *.copr ]]; then
+	    while read line; do
+		if [[ $line != "" ]] && [[ $line != "#"* ]]; then
+		    sudo dnf copr enable -y $line
+		fi
+	    done < $file
+
+	    echo -e "\nenabling copr repo $file:"
 	fi
     done
 }

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+install() {
+    gsettings set org.gnome.desktop.interface cursor-theme "La Capitaine Cursors"
+}
+
+update() {
+    echo "No need to update, la capitaine cursors are installed as a package"
+}
+
+. ../util/manage.sh
