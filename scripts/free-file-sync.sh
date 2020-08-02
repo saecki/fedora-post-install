@@ -7,7 +7,7 @@ install() {
     
     sudo rm -rf /opt/FreeFileSync
 
-    wget -P $dl_dir "https://freefilesync.org/download/FreeFileSync_"$vers"_Linux.tar.gz"
+    wget --no-ftps-implicit -P $dl_dir "https://freefilesync.org/download/FreeFileSync_"$vers"_Linux.tar.gz"
     sudo tar xzf "$dl_dir/FreeFileSync_"$vers"_Linux.tar.gz" -C /opt
     
     rm -rf $dl_dir
