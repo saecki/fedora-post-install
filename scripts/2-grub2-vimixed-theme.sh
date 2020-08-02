@@ -1,7 +1,7 @@
 #!/bin/sh
 
 install() {
-    sudo git clone https://saecki@bitbucket.org/saecki/vimixed.git /boot/grub2/themes/vimixed
+    sudo git clone https://saecki@github.com/saecki/vimixed.git /boot/grub2/themes/vimixed
     sudo echo "GRUB_THEME=/boot/grub2/themes/vimixed/theme.txt" >> /etc/default/grub
 }
 
