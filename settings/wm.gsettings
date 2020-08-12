@@ -36,3 +36,5 @@ org.gnome.desktop.wm.keybindings begin-move ['<Shift><Super>m']
 org.gnome.desktop.wm.keybindings show-desktop ['<Super>d']
 
 org.gnome.settings-daemon.plugins.media-keys screensaver ['<Super>Escape']
+org.gnome.desktop.wm.keybindings toggle-fullscreen ['<Alt>F11']
+

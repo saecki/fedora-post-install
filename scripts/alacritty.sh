@@ -2,16 +2,16 @@
 
 compile() {
     $HOME/.cargo/bin/cargo build \
-	--manifest-path=$HOME/Documents/IdeaProjects/alacritty/Cargo.toml \
+	--manifest-path=$HOME/Documents/projects/alacritty/Cargo.toml \
 	--release
 
     sudo cp \
-	$HOME/Documents/IdeaProjects/alacritty/target/release/alacritty \
+	$HOME/Documents/projects/alacritty/target/release/alacritty \
 	/usr/local/bin/
 }
 
 install() {
-    git clone https://github.com/alacritty/alacritty.git $HOME/Documents/IdeaProjects/alacritty
+    git clone https://github.com/alacritty/alacritty.git $HOME/Documents/projects/alacritty
 
     compile
 
@@ -46,7 +46,7 @@ install() {
 }
 
 update() {
-    git -C $HOME/Documents/IdeaProjects/alacritty pull origin master
+    git -C $HOME/Documents/projects/alacritty pull origin master
     
     compile
 }

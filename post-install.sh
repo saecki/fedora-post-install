@@ -139,4 +139,11 @@ while getopts "hiprsu" opt; do
     esac
 done
 
-echo "Use the -i flag to install or -u to update."
+echo "
+Flags:
+-r install repos
+-p install packages
+-s install settings
+-i run installation procedure
+-u run update procedure
+"

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-src_path="$HOME/Documents/IdeaProjects/playlist_localizer"
+src_path="$HOME/Documents/projects/playlist_localizer"
 
 compile() {
     $HOME/.cargo/bin/cargo build \
