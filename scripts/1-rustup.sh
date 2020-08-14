@@ -9,4 +9,4 @@ update() {
     $HOME/.cargo/bin/rustup update
 }
 
-. ../util/manage.sh
+. "$(dirname $(dirname $0))/util/manage.sh"

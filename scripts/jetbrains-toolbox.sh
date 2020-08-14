@@ -18,4 +18,4 @@ update() {
     echo "let toolbox update itself"
 }
 
-. ../util/manage.sh
+. "$(dirname $(dirname $0))/util/manage.sh"

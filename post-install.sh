@@ -1,65 +1,15 @@
 #!/bin/sh
 
 repos() {
-    for file in repos/*; do
-	if [[ $file == *.repo ]]; then
-	    echo -e "\ncopying $file to /etc/yum.repos.d/"
-	    sudo cp repos/* /etc/yum.repos.d/
-	fi
-
-	if [[ $file == *.install ]]; then
-	    while read line; do
-		if [[ $line != "" ]] && [[ $line != "#"* ]]; then
-		    packages=$packages" $line"
-		fi
-	    done < $file
-
-	    echo -e "\ninstalling repo $file:"
-	    sudo dnf install -y $packages
-
-	    packages=""
-	fi
-	
-	if [[ $file == *.copr ]]; then
-	    while read line; do
-		if [[ $line != "" ]] && [[ $line != "#"* ]]; then
-		    sudo dnf copr enable -y $line
-		fi
-	    done < $file
-
-	    echo -e "\nenabling copr repo $file:"
-	fi
-    done
+    util/repo.sh repos/*
 }
 
 packages() {
-    for file in packages/*; do
-	if [[ $file == *.pkglst ]]; then
-	    while read line; do
-		if [[ $line != "" ]] && [[ $line != "#"* ]]; then
-		    packages=$packages" $line"
-		fi
-	    done < $file
+    util/packages.sh packages/*
+}
 
-	    echo -e "\ninstalling $file:"
-	    sudo dnf install -y $packages
-	    
-	    packages=""
-	fi
-
-	if [[ $file == *.grplst ]]; then
-	    while read line; do
-		if [[ $line != "" ]] && [[ $line != "#"* ]]; then
-		    packages=$packages" $line"
-		fi
-	    done < $file
-
-	    echo -e "\ninstalling $file:"
-	    sudo dnf group install -y $packages
-	    
-	    packages=""
-	fi
-    done
+settings() {
+    util/settings.sh settings/*
 }
 
 scripts_install() {
@@ -79,21 +29,6 @@ scripts_update() {
 	fi
     done
 } 
-
-settings() {
-    for file in settings/*; do
-	if [[ $file == *.gsettings ]]; then
-	    echo -e "\napplying settings from $file:"
-	    
-	    while read line; do
-		if [[ $line != "" ]] && [[ $line != "#"* ]]; then
-		    gsettings set $line
-		fi
-	    done < $file
-
-	fi
-    done
-}
 
 install() {
     # update

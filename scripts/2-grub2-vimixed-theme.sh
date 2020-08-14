@@ -9,4 +9,4 @@ update() {
     sudo git -C /boot/grub2/themes/vimixed pull origin master
 }
 
-. ../util/manage.sh
+. "$(dirname $(dirname $0))/util/manage.sh"

@@ -12,4 +12,4 @@ update() {
     sudo pip3 install -r "$install_dir/requirements.txt"
 }
 
-. ../util/manage.sh
+. "$(dirname $(dirname $0))/util/manage.sh"

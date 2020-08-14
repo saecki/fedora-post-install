@@ -8,4 +8,4 @@ update() {
     upgrade_oh_my_zsh
 }
 
-. ../util/manage.sh
+. "$(dirname $(dirname $0))/util/manage.sh"

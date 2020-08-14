@@ -10,4 +10,4 @@ update() {
     sudo git --work-tree=/usr/local/bin/ --git-dir=/usr/local/bin/.scripts checkout -f
 }
 
-. ../util/manage.sh
+. "$(dirname $(dirname $0))/util/manage.sh"

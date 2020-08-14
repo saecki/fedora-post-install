@@ -51,4 +51,4 @@ update() {
     compile
 }
 
-. ../util/manage.sh
+. "$(dirname $(dirname $0))/util/manage.sh"

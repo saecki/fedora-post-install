@@ -9,4 +9,4 @@ update() {
     echo "Run PlugUpgrade from within vim to update vim-plug"
 }
 
-. ../util/manage.sh
+. "$(dirname $(dirname $0))/util/manage.sh"
