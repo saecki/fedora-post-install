@@ -20,4 +20,4 @@ update() {
     echo "Let discord update itself or reinstall it"
 }
 
-. "$(dirname $(dirname $0))/util/manage.sh"
+. "$(dirname $(dirname $(realpath $0)))/util/manage.sh"

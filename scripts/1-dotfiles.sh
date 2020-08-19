@@ -10,4 +10,4 @@ update() {
     git --work-tree=$HOME --git-dir=$HOME/.dotfiles checkout -f
 }
 
-. "$(dirname $(dirname $0))/util/manage.sh"
+. "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
