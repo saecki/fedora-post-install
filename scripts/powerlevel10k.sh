@@ -8,4 +8,4 @@ update() {
     git -C $HOME/.oh-my-zsh/custom/themes/powerlevel10k pull
 }
 
-. "$(dirname $(dirname $0))/util/manage.sh"
+. "$(dirname $(dirname $(realpath $0)))/util/manage.sh"

@@ -22,4 +22,4 @@ update() {
     echo "Update the version number and reinstall"
 }
 
-. "$(dirname $(dirname $0))/util/manage.sh"
+. "$(dirname $(dirname $(realpath $0)))/util/manage.sh"

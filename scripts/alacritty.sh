@@ -39,10 +39,11 @@ install() {
 
     keybindings="$oldkeybindings'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/']"
     gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "$keybindings"
-
-    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/ name "'launch-terminal'"
-    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/ command "'$executable -t \"magic box\"'"
-    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/ binding "'<Super>Return'"
+    
+    keybindingpath="org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-terminal/"
+    gsettings set $keybindingpath name "'launch-terminal'"
+    gsettings set $keybindingpath command "'$executable -t \"magic box\"'"
+    gsettings set $keybindingpath binding "'<Super>Return'"
 }
 
 update() {
@@ -51,4 +52,4 @@ update() {
     compile
 }
 
-. "$(dirname $(dirname $0))/util/manage.sh"
+. "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
