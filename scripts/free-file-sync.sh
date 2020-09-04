@@ -1,6 +1,6 @@
 #!/bin/sh
 
-vers="11.0"
+vers="11.1"
 
 install() {
     dl_dir=$(mktemp -d)
