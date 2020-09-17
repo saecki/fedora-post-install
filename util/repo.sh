@@ -8,10 +8,13 @@ for file in $@; do
 
     if [[ $file == *.install ]]; then
         while read line; do
-            if [[ $line != "" ]] && [[ $line != "#"* ]]; then
-                packages=$packages" $line"
+            if [[ "$line" != "" ]] && [[ "$line" != "#"* ]]; then
+                package="$(eval "echo $line")"
+                packages="$packages $package"
             fi
         done < $file
+        
+        echo "###$packages###"
 
         echo -e "\ninstalling repo $file:"
         sudo dnf install -y $packages
