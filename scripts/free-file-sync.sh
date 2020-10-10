@@ -1,13 +1,13 @@
 #!/bin/sh
 
-vers="11.1"
+vers="11.2"
 
 install() {
     dl_dir=$(mktemp -d)
     
     sudo rm -rf /opt/FreeFileSync
 
-    wget --no-ftps-implicit -P $dl_dir "https://freefilesync.org/download/FreeFileSync_"$vers"_Linux.tar.gz"
+    wget --no-ftps-implicit --no-cache --no-dns-cache -P $dl_dir "https://freefilesync.org/download/FreeFileSync_"$vers"_Linux.tar.gz"
     sudo tar xzf "$dl_dir/FreeFileSync_"$vers"_Linux.tar.gz" -C /opt
     
     rm -rf $dl_dir
