@@ -15,11 +15,7 @@ install() {
 
     compile
 
-    if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
-	executable="/usr/local/bin/alacritty-wayland"
-    else
-	executable="/usr/local/bin/alacritty"
-    fi
+    executable="/usr/local/bin/alacritty-launcher"
 
     sudo /usr/local/bin/create-desktop-file \
 	-e $executable \
