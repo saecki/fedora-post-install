@@ -21,6 +21,7 @@ cowsay
 dconf
 figlet
 fortune-mod
+fzf
 git-subtree
 htop
 jq
@@ -30,7 +31,9 @@ ncmpcpp
 neofetch
 neovim
 ranger
+ripgrep
 sl
+the_silver_searcher
 tmux
 vifm
 vim
