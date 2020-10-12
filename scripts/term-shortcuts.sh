@@ -13,13 +13,19 @@ install() {
     keybindings="$oldkeybindings"
 
     keybinding="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-term/"
-    if [[ *"'$keybinding'"* == $keybindings ]]; then
+    if [[ *"'$keybinding'"* != $keybindings ]]; then
+        echo "adding launch-term keybinding"
         keybindings="$keybindings'$keybinding',"
+    else
+        echo "launch-term keybinding already present"
     fi
 
     tmuxkeybinding="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-term-tmux/"
-    if [[ *"'$tmuxkeybinding'"* == $keybindings ]]; then
+    if [[ *"'$tmuxkeybinding'"* != $keybindings ]]; then
+        echo "adding launch-term-tmux keybinding"
         keybindings="$keybindings'$tmuxkeybinding',"
+    else
+        echo "launch-term-tmux keybinding already present"
     fi
 
     keybindings="${keybindings::-1}]"

@@ -15,7 +15,7 @@ install() {
 
     compile
 
-    executable="/usr/local/bin/launch-term"
+    executable="/usr/local/bin/launch-alacritty"
 
     sudo /usr/local/bin/create-desktop-file \
 	-e $executable \
