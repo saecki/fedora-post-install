@@ -1,5 +1,5 @@
 # fedora-post-install
-A post install script for fedora.  
+A post install script for fedora.
 
 ## repos
 
