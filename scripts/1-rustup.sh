@@ -5,8 +5,9 @@ install() {
 }
 
 update() {
-    $HOME/.cargo/bin/rustup self update
     $HOME/.cargo/bin/rustup update
+    $HOME/.cargo/bin/rustup completions zsh rustup > $ZDOTDIR/functions
+    $HOME/.cargo/bin/rustup completions zsh cargo > $ZDOTDIR/functions
 }
 
 . "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
