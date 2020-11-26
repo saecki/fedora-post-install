@@ -15,12 +15,12 @@ org.gnome.desktop.wm.keybindings move-to-monitor-up ['<Super><Shift>k','<Super><
 org.gnome.desktop.wm.keybindings move-to-monitor-right ['<Super><Shift>l','<Super><Shift>Right']
 
 # Moving windows to workspace
-org.gnome.desktop.wm.keybindings move-to-workspace-down ['<Control><Shift><Alt>j','<Control><Shift><Alt>Down']
-org.gnome.desktop.wm.keybindings move-to-workspace-up ['<Control><Shift><Alt>k','<Control><Shift><Alt>Up']
+org.gnome.desktop.wm.keybindings move-to-workspace-down ['<Control><Shift><Super>j','<Control><Shift><Super>Down']
+org.gnome.desktop.wm.keybindings move-to-workspace-up ['<Control><Shift><Super>k','<Control><Shift><Super>Up']
 
 # Switching workspaces
-org.gnome.desktop.wm.keybindings switch-to-workspace-down ['<Control><Alt>j','<Control><Alt>Down']
-org.gnome.desktop.wm.keybindings switch-to-workspace-up ['<Control><Alt>k','<Control><Alt>Up']
+org.gnome.desktop.wm.keybindings switch-to-workspace-down ['<Control><Super>j','<Control><Super>Down']
+org.gnome.desktop.wm.keybindings switch-to-workspace-up ['<Control><Super>k','<Control><Super>Up']
 
 # Switching windows
 org.gnome.desktop.wm.keybindings switch-applications []
