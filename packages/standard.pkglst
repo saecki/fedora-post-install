@@ -8,10 +8,12 @@ gnome-calendar
 gnome-extensions-app
 gnome-tweaks
 hplip-gui
+inkscape
 lutris
 prusa-slicer
 vlc
 wine
+xorg-x11-apps
 
 ## command-line
 asciiquarium
