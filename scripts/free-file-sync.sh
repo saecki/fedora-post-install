@@ -1,8 +1,7 @@
 #!/bin/sh
 
-vers="11.4"
-
 install() {
+    vers=$(curl https://freefilesync.org/download.php | rg --multiline --no-filename -e "^(.*?)FreeFileSync_(.*?)_Linux.tar.gz(.*?)$" -r '$2')
     dl_dir=$(mktemp -d)
     
     sudo rm -rf /opt/FreeFileSync
@@ -19,7 +18,7 @@ install() {
 }
 
 update() {
-    echo "Update the version number and reinstall"
+    install
 }
 
 . "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
