@@ -3,6 +3,8 @@
 install() {
     dl_dir=$(mktemp -d)
 
+    sudo rm -rf "/usr/share/themes/Layan*"
+
     git clone https://github.com/vinceliuice/Layan-gtk-theme.git "$dl_dir/Layan-gtk-theme"
     sudo $dl_dir/Layan-gtk-theme/install.sh
     rm -rf $dl_dir
