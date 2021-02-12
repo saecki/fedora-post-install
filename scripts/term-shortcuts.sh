@@ -1,3 +1,5 @@
+#!/bin/sh
+
 install() {
     oldkeybindings=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
 

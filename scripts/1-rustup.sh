@@ -1,7 +1,12 @@
 #!/bin/sh
 
 install() {
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    dl_dir=$(mktemp -d)
+
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > "$dl_dir/rustup.sh"
+    chmod +x "$dl_dir/rustup.sh"
+
+    $dl_dir/rustup.sh --no-modify-path -y
 }
 
 update() {

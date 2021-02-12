@@ -9,7 +9,7 @@ for file in $@; do
         done < $file
 
         echo -e "\ninstalling $file:"
-        sudo dnf install -y $packages
+        sudo dnf install -y --skip-broken $packages
         
         packages=""
     fi
@@ -22,7 +22,7 @@ for file in $@; do
         done < $file
 
         echo -e "\ninstalling $file:"
-        sudo dnf group install -y $packages
+        sudo dnf group install -y --skip-broken $packages
         
         packages=""
     fi
