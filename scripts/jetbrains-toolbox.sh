@@ -8,7 +8,7 @@ install() {
     DIR=$(find $dl_dir -maxdepth 1 -type d -name jetbrains-toolbox-\* -print | head -n1)
 
     $DIR/jetbrains-toolbox &
-    sleep 5
+    sleep 10
     killall jetbrains-toolbox
     
     rm -rf $dl_dir
