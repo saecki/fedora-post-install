@@ -13,7 +13,7 @@ install() {
     chmod +x $dl_dir/TeamSpeak3-Client-linux_amd64-$version.run
    
     expect_commands="
-    spawn $dl_dir/TeamSpeak3-Client-linux_amd64-3.5.3.run
+    spawn $dl_dir/TeamSpeak3-Client-linux_amd64-$version.run
     sleep 1
     send \"\\r\"
     sleep 1

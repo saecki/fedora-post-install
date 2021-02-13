@@ -6,19 +6,26 @@ install() {
     
     sudo rm -rf /opt/FreeFileSync
 
-    wget -P $dl_dir "https://freefilesync.org/download/FreeFileSync_"$vers"_Linux.tar.gz"
-    sudo tar xzf "$dl_dir/FreeFileSync_"$vers"_Linux.tar.gz" -C /opt
+    wget -P $dl_dir "https://freefilesync.org/download/FreeFileSync_${vers}_Linux.tar.gz"
+    tar xzf "$dl_dir/FreeFileSync_"$vers"_Linux.tar.gz" -C $dl_dir/
+
+    expect_commands="
+    spawn $dl_dir/FreeFileSync_${vers}_Install.run
+    sleep 1
+    send \"y\\r\"
+    sleep 1
+    send \"y\\r\"
+    expect eof {exit}"
+
+    (cd $dl_dir && sudo expect -c "${expect_commands//
+    /;}")
+ 
     
     rm -rf $dl_dir
-    
-    sudo /usr/local/bin/create-desktop-file \
-	-e /opt/FreeFileSync/FreeFileSync \
-	-n FreeFileSync \
-	-i /opt/FreeFileSync/Resources/FreeFileSync.png
 }
 
 update() {
-    install
+    echo "Let FreeFileSync update itself or reinstall it"
 }
 
 . "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
