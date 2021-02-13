@@ -17,4 +17,4 @@ update() {
     install
 }
 
-. ../util/manage.sh
+. "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
