@@ -4,6 +4,7 @@ arduino
 blender
 cantata
 dmenu
+geary
 gimp
 gnome-calendar
 gnome-extensions-app
@@ -16,6 +17,13 @@ prusa-slicer
 vlc
 wine
 xorg-x11-apps
+
+## extensions
+gnome-shell-extension-dash-to-dock
+gnome-shell-extension-gsconnect
+gnome-shell-extension-topicons-plus
+gnome-shell-extension-bubblemail
+bubblemail
 
 ## command-line
 asciiquarium
