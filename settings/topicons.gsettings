@@ -1,0 +1,3 @@
+org.gnome.shell.extensions.topicons tray-pos 'left'
+org.gnome.shell.extensions.topicons tray-order 0
+org.gnome.shell.extensions.topicons icon-size 16

@@ -1,0 +1,5 @@
+schemadir:$HOME/.local/share/gnome-shell/extensions/just-perfection-desktop@just-perfection/schemas
+
+org.gnome.shell.extensions.just-perfection app-menu false
+org.gnome.shell.extensions.just-perfection theme false
+
