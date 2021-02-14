@@ -7,9 +7,9 @@ install() {
     amount="${#commas}"
 
     if [[ $amount == "0" ]]; then
-	    oldkeybindings="["
+        oldkeybindings="["
     else
-	    oldkeybindings="${oldkeybindings::-1},"
+        oldkeybindings="${oldkeybindings::-1},"
     fi
 
     keybindings="$oldkeybindings"
@@ -35,12 +35,12 @@ install() {
     gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "$keybindings"
 
     keybindingpath="org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$keybinding"
-    gsettings set $keybindingpath name "'launch-term'"
+    gsettings set $keybindingpath name "'Launch terminal'"
     gsettings set $keybindingpath command "'$launchterm -t \"magic box\"'"
     gsettings set $keybindingpath binding "'<Super><Shift>Return'"
 
     tmuxkeybindingpath="org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$tmuxkeybinding"
-    gsettings set $tmuxkeybindingpath name "'launch-term-tmux'"
+    gsettings set $tmuxkeybindingpath name "'Launch terminal tmux'"
     gsettings set $tmuxkeybindingpath command "'$launchterm -t \"magic box\" -e tmux'"
     gsettings set $tmuxkeybindingpath binding "'<Super>Return'"
 }
