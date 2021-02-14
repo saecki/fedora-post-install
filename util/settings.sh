@@ -6,6 +6,7 @@ for file in $@; do
 
         while read line; do
             if [[ $line != "" ]] && [[ $line != "#"* ]]; then
+                echo "setting: $line"
                 gsettings set $line
             fi
         done < $file
