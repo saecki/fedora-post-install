@@ -1,5 +1,5 @@
 #!/bin/sh
-    
+
 for file in $@; do
     if [[ $file == *.pkglst ]]; then
         while read line; do
@@ -10,7 +10,7 @@ for file in $@; do
 
         echo -e "\ninstalling $file:"
         sudo dnf install -y --skip-broken $packages
-        
+
         packages=""
     fi
 
@@ -23,7 +23,7 @@ for file in $@; do
 
         echo -e "\ninstalling $file:"
         sudo dnf group install -y --skip-broken $packages
-        
+
         packages=""
     fi
 done

@@ -13,7 +13,7 @@ for file in $@; do
                 packages="$packages $package"
             fi
         done < $file
-        
+
         echo "###$packages###"
 
         echo -e "\ninstalling repo $file:"

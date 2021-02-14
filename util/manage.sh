@@ -1,9 +1,9 @@
 #!/bin/sh
 
 while getopts "iuh" opt; do
-    case "$opt" in 
-	i ) install; exit;;
-	u ) update; exit;;
+    case "$opt" in
+        i ) install; exit;;
+        u ) update; exit;;
     esac
 done
 
