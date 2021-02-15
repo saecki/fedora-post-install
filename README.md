@@ -18,3 +18,6 @@ All files in the scripts dir will be executed, they usually should accept ```-i`
 
 ## settings
 ```.gsettings``` extensions for gsettings schemas with key value pairs that will be set using gsettings.
+For schemas that are not installed system wide a custom schema dir can be defined using:
+```schemadir:<dir>```
+
