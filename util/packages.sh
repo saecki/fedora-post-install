@@ -4,7 +4,7 @@ for file in $@; do
     if [[ $file == *.pkglst ]]; then
         while read line; do
             if [[ $line != "" ]] && [[ $line != "#"* ]]; then
-                packages=$packages" $line"
+                packages="$packages $line"
             fi
         done < $file
 
@@ -15,14 +15,14 @@ for file in $@; do
     fi
 
     if [[ $file == *.grplst ]]; then
+        echo -e "\ninstalling $file:"
         while read line; do
             if [[ $line != "" ]] && [[ $line != "#"* ]]; then
-                packages=$packages" $line"
+                echo -e "\ninstalling group \"$line\":"
+                sudo dnf group install -y --skip-broken "$line"
             fi
         done < $file
 
-        echo -e "\ninstalling $file:"
-        sudo dnf group install -y --skip-broken $packages
 
         packages=""
     fi
