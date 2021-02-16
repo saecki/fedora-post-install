@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
 install() {
-    vers=$(curl https://freefilesync.org/download.php | rg --multiline --no-filename -e "^(.*?)FreeFileSync_(.*?)_Linux.tar.gz(.*?)$" -r '$2')
+    vers=$(curl https://freefilesync.org/download.php | rg --multiline --no-filename -e "^(.*?)FreeFileSync_(.*?)_Linux.tar.gz(.*?)$" -r "$2")
     dl_dir=$(mktemp -d)
-    
+
     sudo rm -rf /opt/FreeFileSync
 
-    wget -P $dl_dir "https://freefilesync.org/download/FreeFileSync_${vers}_Linux.tar.gz"
-    tar xzf "$dl_dir/FreeFileSync_"$vers"_Linux.tar.gz" -C $dl_dir/
+    wget -O "$dl_dir/FreeFileSync.tar.gz" "https://freefilesync.org/download/FreeFileSync_${vers}_Linux.tar.gz"
+    tar xzf "$dl_dir/FreeFileSync.tar.gz" -C "$dl_dir"
 
     expect_commands="
     spawn $dl_dir/FreeFileSync_${vers}_Install.run
@@ -17,11 +17,11 @@ install() {
     send \"y\\r\"
     expect eof {exit}"
 
-    (cd $dl_dir && sudo expect -c "${expect_commands//
+    (cd "$dl_dir" && sudo expect -c "${expect_commands//
     /;}")
- 
-    
-    rm -rf $dl_dir
+
+
+    rm -rf "$dl_dir"
 }
 
 update() {

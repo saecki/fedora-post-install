@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 install() {
     dl_dir=$(mktemp -d)
@@ -6,8 +6,8 @@ install() {
     sudo rm -rf "/usr/share/kvantum/Layan*"
 
     git clone https://github.com/vinceliuice/Layan-kde-theme.git "$dl_dir/Layan-kde-theme"
-    sudo $dl_dir/Layan-kde-theme/install.sh
-    rm -rf $dl_dir
+    sudo "$dl_dir/Layan-kde-theme/install.sh"
+    rm -rf "$dl_dir"
 }
 
 update() {

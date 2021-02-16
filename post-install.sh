@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 repos() {
     util/repo.sh repos/*
@@ -71,6 +71,7 @@ while getopts "hiprsu" opt; do
 	s ) settings; exit;;
 	i ) install; exit;;
 	u ) update; exit;;
+    * )
     esac
 done
 

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 vers="3.5.4"
 
@@ -7,10 +7,10 @@ install() {
 
     sudo rm -rf /opt/processing-3*
 
-    wget -P $dl_dir https://github.com/processing/processing/releases/download/processing-0270-$vers/processing-$vers-linux64.tgz
-    sudo tar xzf "$dl_dir/processing-$vers-linux64.tgz" -C /opt
+    wget -O "$dl_dir/processing.tar.gz" "https://download.processing.org/processing-$vers-linux64.tgz"
+    sudo tar xzf "$dl_dir/processing.tar.gz" -C /opt
 
-    rm -rf $dl_dir
+    rm -rf "$dl_dir"
 
     sudo create-desktop-file \
 	-e "/opt/processing-$vers/processing" \

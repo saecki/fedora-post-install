@@ -1,14 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 install() {
     dl_dir=$(mktemp -d)
 
-    wget -P $dl_dir https://files.multimc.org/downloads/mmc-stable-lin64.tar.gz
+    wget -O "$dl_dir/mmc.tar.gz" https://files.multimc.org/downloads/mmc-stable-lin64.tar.gz
 
     sudo rm -rf /opt/MultiMc
-    sudo tar xzf "$dl_dir/mmc-stable-lin64.tar.gz" -C /opt/
+    sudo tar xzf "$dl_dir/mmc.tar.gz" -C /opt/
 
-    rm -rf $dl_dir
+    rm -rf "$dl_dir"
 
     sudo /usr/local/bin/create-desktop-file \
 	-e /opt/MultiMC/MultiMC \

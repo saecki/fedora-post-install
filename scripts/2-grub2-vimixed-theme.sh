@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 install() {
     sudo git clone https://saecki@github.com/saecki/vimixed.git /boot/grub2/themes/vimixed

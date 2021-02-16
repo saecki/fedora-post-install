@@ -1,19 +1,19 @@
-#!/bin/sh
+#!/bin/bash
 
 install() {
     dl_dir=$(mktemp -d)
 
-    wget -P $dl_dir https://discordapp.com/api/download\?platform\=linux\&format\=tar.gz
+    wget -O "$dl_dir/discord.tar.gz" https://discordapp.com/api/download\?platform\=linux\&format\=tar.gz
 
     sudo rm -rf /opt/Discord
-    sudo tar xzf "$dl_dir/download?platform=linux&format=tar.gz" -C /opt/
+    sudo tar xzf "$dl_dir/discord.tar.gz" -C /opt/
 
-    rm -rf $dl_dir
+    rm -rf "$dl_dir"
 
     sudo /usr/local/bin/create-desktop-file \
-	-e /opt/Discord/Discord \
-	-n Discord \
-	-g com.discordapp.Discord
+    -e /opt/Discord/Discord \
+    -n Discord \
+    -g com.discordapp.Discord
 }
 
 update() {
@@ -21,3 +21,4 @@ update() {
 }
 
 . "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
+

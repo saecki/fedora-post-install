@@ -1,33 +1,34 @@
-#!/bin/sh
+#!/bin/bash
 
-for file in $@; do
-    if [[ $file == *.repo ]]; then
+for file in "$@"; do
+    if [[ "$file" == *.repo ]]; then
         echo -e "\ncopying $file to /etc/yum.repos.d/"
-        sudo cp $file /etc/yum.repos.d/
+        sudo cp "$file" /etc/yum.repos.d/
     fi
 
-    if [[ $file == *.install ]]; then
-        while read line; do
+    if [[ "$file" == *.install ]]; then
+        while read -r line; do
             if [[ "$line" != "" ]] && [[ "$line" != "#"* ]]; then
                 package="$(eval "echo $line")"
                 packages="$packages $package"
             fi
-        done < $file
+        done < "$file"
 
         echo "###$packages###"
 
         echo -e "\ninstalling repo $file:"
-        sudo dnf install -y $packages
+        sudo dnf install -y "$packages"
 
         packages=""
     fi
 
     if [[ $file == *.copr ]]; then
         echo -e "\nenabling copr repo $file:"
-        while read line; do
-            if [[ $line != "" ]] && [[ $line != "#"* ]]; then
-                sudo dnf copr enable -y $line
+        while read -r line; do
+            if [[ "$line" != "" ]] && [[ "$line" != "#"* ]]; then
+                sudo dnf copr enable -y "$line"
             fi
-        done < $file
+        done < "$file"
     fi
 done
+

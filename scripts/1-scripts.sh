@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 install() {
     sudo git clone --bare https://saecki@github.com/saecki/scripts.git /usr/local/bin/.scripts

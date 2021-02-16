@@ -1,14 +1,13 @@
-
-#!/bin/sh
+#!/bin/bash
 
 install() {
-    git clone --bare https://saecki@github.com/saecki/stuff.git $HOME/.stuff
-    git --work-tree=$HOME --git-dir=$HOME/.stuff checkout -f
+    git clone --bare https://saecki@github.com/saecki/stuff.git "$HOME/.stuff"
+    git --work-tree="$HOME" --git-dir="$HOME/.stuff" checkout -f
 }
 
 update() {
-    git --work-tree=$HOME --git-dir=$HOME/.stuff pull origin master
-    git --work-tree=$HOME --git-dir=$HOME/.stuff checkout -f
+    git --work-tree="$HOME" --git-dir="$HOME/.stuff" pull origin master
+    git --work-tree="$HOME" --git-dir="$HOME/.stuff" checkout -f
 }
 
 . "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
