@@ -1,1 +1,3 @@
 org.gnome.shell.extensions.bubblemail newest-first true
+org.gnome.shell.extensions.bubblemail always-show false
+
