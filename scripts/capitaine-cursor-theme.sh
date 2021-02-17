@@ -11,8 +11,6 @@ install() {
     sudo rm -rf "$theme_dir"
     sudo cp -pr "$git_dir/dist/light" "$theme_dir"
 
-    rm -rf "$dl_dir"
-
     gsettings set org.gnome.desktop.interface cursor-theme capitaine-cursors-light
 }
 

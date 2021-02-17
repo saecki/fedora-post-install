@@ -10,13 +10,11 @@ install() {
     wget -O "$dl_dir/processing.tar.gz" "https://download.processing.org/processing-$vers-linux64.tgz"
     sudo tar xzf "$dl_dir/processing.tar.gz" -C /opt
 
-    rm -rf "$dl_dir"
-
     sudo create-desktop-file \
-	-e "/opt/processing-$vers/processing" \
-	-n "Processing IDE" \
-	-i "/opt/processing-$vers/lib/icons/pde-1024.png" \
-	-f processing-ide
+    -e "/opt/processing-$vers/processing" \
+    -n "Processing IDE" \
+    -i "/opt/processing-$vers/lib/icons/pde-1024.png" \
+    -f processing-ide
 }
 
 update() {

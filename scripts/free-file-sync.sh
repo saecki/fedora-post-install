@@ -1,7 +1,14 @@
 #!/bin/bash
 
 install() {
-    vers=$(curl https://freefilesync.org/download.php | rg --multiline --no-filename -e "^(.*?)FreeFileSync_(.*?)_Linux.tar.gz(.*?)$" -r "$2")
+    vers=$(curl https://freefilesync.org/download.php | rg --multiline --no-filename -e "^(.*?)FreeFileSync_(.*?)_Linux.tar.gz(.*?)$" -r '$2')
+    if [[ $vers == "" ]]; then
+        echo "unable to get version"
+        exit 1
+    else
+        echo "got version $vers"
+    fi
+
     dl_dir=$(mktemp -d)
 
     sudo rm -rf /opt/FreeFileSync
@@ -19,9 +26,6 @@ install() {
 
     (cd "$dl_dir" && sudo expect -c "${expect_commands//
     /;}")
-
-
-    rm -rf "$dl_dir"
 }
 
 update() {

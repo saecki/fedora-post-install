@@ -8,11 +8,9 @@ install() {
     sudo rm -rf /opt/MultiMc
     sudo tar xzf "$dl_dir/mmc.tar.gz" -C /opt/
 
-    rm -rf "$dl_dir"
-
     sudo /usr/local/bin/create-desktop-file \
-	-e /opt/MultiMC/MultiMC \
-	-n MultiMC \
+    -e /opt/MultiMC/MultiMC \
+    -n MultiMC \
     -g org.MultiMC
 }
 

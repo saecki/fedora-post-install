@@ -25,8 +25,6 @@ install() {
     /;}")
     
     sudo mv "$dl_dir/TeamSpeak3-Client-linux_amd64" /opt/
-    
-    rm -rf "$dl_dir"
 
     sudo /usr/local/bin/create-desktop-file \
 	-e /opt/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh \

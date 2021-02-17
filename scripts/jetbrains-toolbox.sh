@@ -10,8 +10,6 @@ install() {
     "$DIR/jetbrains-toolbox" &
     sleep 10
     killall jetbrains-toolbox
-    
-    rm -rf "$dl_dir"
 }
 
 update() {
