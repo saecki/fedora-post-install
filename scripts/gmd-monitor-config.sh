@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install() {
-    sudo ln -s "$HOME/.config/monitors.xml" /var/lib/gdm/.config/
+    sudo ln "$HOME/.config/monitors.xml" /var/lib/gdm/.config/
 }
 
 update() {
