@@ -97,20 +97,20 @@ libatomic
 ## gtk
 gtk3-devel
 
+## hp printers
+hplip
+hplip-common
+hplip-libs
+
 ## miscellaneous
-cmake
 exfat-utils
 expect
 fontawesome-fonts
 fontconfig-devel
 freetype-devel
-hplip
-hplip-common
-hplip-libs
 kernel-devel
 libxcb-devel
+openssl-devel
 python3-neovim
 texlive
 tlp
-tor
-torsocks
