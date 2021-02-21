@@ -8,7 +8,7 @@ org.gnome.desktop.interface clock-show-seconds true
 org.gnome.desktop.interface clock-show-seconds true
 
 # Search
-org.gnome.desktop.search-providers disabled ['org.gnome.Contacts.desktop','org.gnome.Boxes.desktop','firefox.desktop','org.gnome.Software.desktop']
+org.gnome.desktop.search-providers disabled ['org.gnome.Contacts.desktop','org.gnome.Boxes.desktop','firefox.desktop','org.gnome.Software.desktop','org.gnome.Epiphany.desktop']
 
 # Keyboard layout
 org.gnome.desktop.input-sources sources [('xkb','us+altgr-intl'),('xkb','de')]
