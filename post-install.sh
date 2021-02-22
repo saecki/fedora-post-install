@@ -14,23 +14,26 @@ settings() {
 
 scripts_install() {
     for file in scripts/*; do
-	if [[ $file == *.sh ]]; then
-	    echo -e "\nexecuting $file:"
-	    $file -i
-	fi
+    if [[ $file == *.sh ]]; then
+        echo -e "\nexecuting $file:"
+        $file -i
+    fi
     done
-} 
+}
 
 scripts_update() {
     for file in scripts/*; do
-	if [[ $file == *.sh ]]; then
-	    echo -e "\nexecuting $file:"
-	    $file -u
-	fi
+    if [[ $file == *.sh ]]; then
+        echo -e "\nexecuting $file:"
+        $file -u
+    fi
     done
-} 
+}
 
 install() {
+    echo "Did you create a ssh key for github?"
+    read
+
     # update
     echo -e "\n## Update ##"
     sudo dnf upgrade --refresh -y
@@ -65,12 +68,12 @@ update() {
 #!/bin/sh
 
 while getopts "hiprsu" opt; do
-    case "$opt" in 
-	r ) repos; exit;;
-	p ) packages; exit;;
-	s ) settings; exit;;
-	i ) install; exit;;
-	u ) update; exit;;
+    case "$opt" in
+    r ) repos; exit;;
+    p ) packages; exit;;
+    s ) settings; exit;;
+    i ) install; exit;;
+    u ) update; exit;;
     * )
     esac
 done
