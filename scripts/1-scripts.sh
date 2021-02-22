@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install() {
-    sudo git clone --bare https://saecki@github.com/saecki/scripts.git /usr/local/bin/.scripts
+    sudo git clone --bare git@github.com:Saecki/scripts /usr/local/bin/.scripts
     sudo git --work-tree=/usr/local/bin/ --git-dir=/usr/local/bin/.scripts checkout -f
 }
 

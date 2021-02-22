@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install() {
-    git clone --bare https://saecki@github.com/saecki/stuff.git "$HOME/.stuff"
+    git clone --bare git@github.com:Saecki/stuff "$HOME/.stuff"
     git --work-tree="$HOME" --git-dir="$HOME/.stuff" checkout -f
 }
 
