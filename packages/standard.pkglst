@@ -1,10 +1,10 @@
 ## applications
 alacritty
 arduino
-bat
 blender
 cantata
 dmenu
+exfalso
 geary
 gimp
 gnome-calendar
@@ -33,6 +33,7 @@ gamemode
 ## command-line
 AtomicParsley
 asciiquarium
+bat
 cmatrix
 cmus
 cowsay
