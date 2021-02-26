@@ -8,7 +8,7 @@ install() {
 }
 
 update() {
-    sudo git --work-tree=/usr/local/bin/ --git-dir=/usr/local/bin/.scripts pull origin master
+    git --git-dir=/usr/local/bin/.scripts fetch origin master:master
     sudo git --work-tree=/usr/local/bin/ --git-dir=/usr/local/bin/.scripts checkout -f
 }
 
