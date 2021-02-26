@@ -5,6 +5,7 @@ blender
 cantata
 dmenu
 exfalso
+ffmpeg
 geary
 gimp
 gnome-calendar
@@ -107,6 +108,8 @@ hplip-libs
 ## miscellaneous
 exfat-utils
 expect
+ffmpeg-devel
+ffmpeg-libs
 fontawesome-fonts
 fontconfig-devel
 freetype-devel

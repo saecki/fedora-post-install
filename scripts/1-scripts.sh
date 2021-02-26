@@ -1,7 +1,9 @@
 #!/bin/bash
 
 install() {
-    sudo git clone --bare git@github.com:Saecki/scripts /usr/local/bin/.scripts
+    dl_dir=$(mktemp -d)
+    git clone --bare git@github.com:Saecki/scripts "$dl_dir/.scripts"
+    sudo mv "$dl_dir/.scripts" /usr/local/bin
     sudo git --work-tree=/usr/local/bin/ --git-dir=/usr/local/bin/.scripts checkout -f
 }
 
