@@ -5,12 +5,13 @@ A post install script for fedora.
 
 ```.repo``` extensions for yum repo files that will be copied into /etc/yum.repos.d/.  
 ```.install``` extensions for rpm repository packages to install.  
+```.copr``` extensions for a list of copr repos that will be enabled.  
 
 ## packages
 
-```.pkglst``` extensions for a list of packages that will be installed.  
-```.grplst``` extensions for a list of package groups that will be installed.  
-```.copr``` extensions for a list of copr repos that will be enabled.  
+```.pkglst``` extensions for a list of packages that will be installed using dnf.  
+```.grplst``` extensions for a list of package groups that will be installed using dnf.  
+```.pip3``` extensions for a list of pypi packages that will be installed using pip3.  
 
 ## scripts
 

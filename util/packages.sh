@@ -12,9 +12,7 @@ for file in "$@"; do
         sudo dnf install -y --skip-broken $packages
 
         packages=""
-    fi
-
-    if [[ $file == *.grplst ]]; then
+    elif [[ $file == *.grplst ]]; then
         echo -e "\ninstalling $file:"
         while read -r line; do
             if [[ $line != "" ]] && [[ $line != "#"* ]]; then
@@ -23,6 +21,17 @@ for file in "$@"; do
             fi
         done < "$file"
 
+
+        packages=""
+    elif [[ $file == *.pip3 ]]; then
+        while read -r line; do
+            if [[ $line != "" ]] && [[ $line != "#"* ]]; then
+                packages="$packages $line"
+            fi
+        done < "$file"
+
+        echo -e "\ninstalling $file:"
+        sudo pip3 install $packages
 
         packages=""
     fi
