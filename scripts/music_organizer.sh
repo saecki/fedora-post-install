@@ -3,13 +3,7 @@
 src_path="$HOME/Projects/music_organizer"
 
 compile() {
-    "$HOME/.cargo/bin/cargo" build \
-    --manifest-path="$src_path/Cargo.toml" \
-    --release
-
-    sudo cp \
-    "$src_path/target/release/cli" \
-    /usr/local/bin/music_organizer
+    (cd "$src_path" && env SHELL=/usr/bin/zsh ./install.sh)
 }
 
 install() {

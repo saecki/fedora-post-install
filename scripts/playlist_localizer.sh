@@ -3,18 +3,12 @@
 src_path="$HOME/Projects/playlist_localizer"
 
 compile() {
-    "$HOME/.cargo/bin/cargo" build \
-    --manifest-path="$src_path/Cargo.toml" \
-    --release
-
-    sudo cp \
-    "$src_path/target/release/playlist_localizer" \
-    /usr/local/bin/
+    (cd "$src_path" && env SHELL=/usr/bin/zsh ./install.sh)
 }
 
 install() {
     git clone git@github.com:Saecki/playlist_localizer "$src_path"
-
+    
     compile
 }
 
