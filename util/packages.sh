@@ -31,7 +31,7 @@ for file in "$@"; do
         done < "$file"
 
         echo -e "\ninstalling $file:"
-        sudo pip3 install $packages
+        pip3 install --user $packages
 
         packages=""
     fi
