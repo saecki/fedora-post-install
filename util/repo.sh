@@ -14,8 +14,6 @@ for file in "$@"; do
             fi
         done < "$file"
 
-        echo "###$packages###"
-
         echo -e "\ninstalling repo $file:"
         sudo dnf install -y $packages
 

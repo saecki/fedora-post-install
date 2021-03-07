@@ -1,6 +1,9 @@
-# sublime
+# sublime-text.repo
 sublime-merge
 sublime-text
 
-# teams
+# teams.repo
 teams
+
+# etcher-rpm.repo
+balena-etcher-electron
