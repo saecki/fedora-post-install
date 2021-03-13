@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install() {
-    . "$HOME/.zprofile"
+    . "$HOME/.zshenv"
 
     oldkeybindings=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
 
