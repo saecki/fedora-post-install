@@ -117,6 +117,8 @@ freetype-devel
 kernel-devel
 libxcb-devel
 openssl-devel
+python3-dnf-plugin-system-upgrade
 python3-neovim
 texlive
 tlp
+
