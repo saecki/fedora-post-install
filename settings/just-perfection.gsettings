@@ -2,4 +2,5 @@ schemadir:$HOME/.local/share/gnome-shell/extensions/just-perfection-desktop@just
 
 org.gnome.shell.extensions.just-perfection app-menu false
 org.gnome.shell.extensions.just-perfection theme false
+org.gnome.shell.extensions.just-perfection workspace-switcher-size 10
 
