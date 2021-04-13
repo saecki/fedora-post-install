@@ -1,0 +1,4 @@
+schemadir:$HOME/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net/schemas
+
+org.gnome.shell.extensions.sound-output-device-chooser show-profiles true
+org.gnome.shell.extensions.sound-output-device-chooser hide-on-single-device false
