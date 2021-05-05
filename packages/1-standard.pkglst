@@ -44,6 +44,7 @@ exa
 figlet
 fortune-mod
 fzf
+git-delta
 git-subtree
 htop
 jq
