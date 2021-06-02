@@ -20,6 +20,11 @@ for file in "$@"; do
         packages=""
     fi
 
+    if [[ "$file" == *.sh ]]; then
+        echo -e "\ninstalling repo $file:"
+        sudo $file
+    fi
+
     if [[ $file == *.copr ]]; then
         echo -e "\nenabling copr repo $file:"
         while read -r line; do
