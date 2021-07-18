@@ -108,6 +108,7 @@ hplip-common
 hplip-libs
 
 ## miscellaneous
+ccls
 exfat-utils
 expect
 ffmpeg-devel
@@ -123,4 +124,3 @@ python3-neovim
 texlive
 tlp
 xkill
-
