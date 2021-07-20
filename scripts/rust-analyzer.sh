@@ -5,6 +5,7 @@ bin_path="$HOME/.local/bin/rust-analyzer"
 
 install() {
     curl -L "$bin_url" | gunzip -c - > "$bin_path"
+    chmod +x "$bin_path"
 }
 
 update() {
