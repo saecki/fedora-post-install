@@ -1,7 +1,8 @@
 #!/bin/bash
 
 install() {
-    vers=$(curl https://freefilesync.org/download.php | rg --multiline --no-filename -e "^(.*?)FreeFileSync_(.*?)_Linux.tar.gz(.*?)$" -r '$2')
+    vers=$(curl https://freefilesync.org/download.php | rg --no-filename \
+        -e "^(.*?)FreeFileSync_(.*?)_Linux.tar.gz(.*?)$" -r '$2')
     if [[ $vers == "" ]]; then
         echo "unable to get version"
         exit 1
