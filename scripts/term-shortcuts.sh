@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install() {
-    . "$HOME/.zshenv"
+    LAUNCHTERM="~/.local/bin/launch-alacritty"
 
     oldkeybindings=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
 
