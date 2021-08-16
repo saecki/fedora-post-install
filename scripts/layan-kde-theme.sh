@@ -4,7 +4,7 @@ install() {
     dl_dir=$(mktemp -d)
 
     git clone https://github.com/vinceliuice/Layan-kde "$dl_dir/Layan-kde-theme"
-    sudo "$dl_dir/Layan-kde-theme/install.sh"
+    "$dl_dir/Layan-kde-theme/install.sh"
 }
 
 update() {

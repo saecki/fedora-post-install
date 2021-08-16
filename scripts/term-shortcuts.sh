@@ -21,7 +21,7 @@ install() {
         echo "adding launch-term keybinding"
         keybindings="$keybindings'$keybinding',"
     else
-        echo "launch-term keybinding already present"
+        echo "launch-term keybinding already present, updating it"
     fi
 
     tmuxkeybinding="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/launch-term-tmux/"
@@ -29,7 +29,7 @@ install() {
         echo "adding launch-term-tmux keybinding"
         keybindings="$keybindings'$tmuxkeybinding',"
     else
-        echo "launch-term-tmux keybinding already present"
+        echo "launch-term-tmux keybinding already present, updating it"
     fi
 
     keybindings="${keybindings::-1}]"

@@ -17,7 +17,7 @@ install() {
         echo "adding toggle-theme keybinding"
         keybindings="$keybindings'$keybinding',"
     else
-        echo "toggle-theme keybinding already present"
+        echo "toggle-theme keybinding already present, updating it"
     fi
 
     keybindings="${keybindings::-1}]"

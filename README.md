@@ -1,6 +1,9 @@
 # fedora-post-install
 A post install script for fedora.
 
+$$ Create a github ssh key
+`ssh-keygen -t ed25519 -C "your_email@example.com"`
+
 ## repos
 
 ```.repo``` extensions for yum repo files that will be copied into /etc/yum.repos.d/.  
