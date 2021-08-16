@@ -21,9 +21,9 @@ prusa-slicer
 quodlibet
 vlc
 wine
-xorg-x11-apps
 
 ## extensions
+gnome-shell-extension-user-theme
 gnome-shell-extension-dash-to-dock
 gnome-shell-extension-gsconnect
 gnome-shell-extension-topicons-plus
@@ -122,3 +122,4 @@ python3-neovim
 texlive
 tlp
 xkill
+xcursorgen
