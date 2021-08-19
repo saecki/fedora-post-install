@@ -3,7 +3,9 @@
 src_path="$HOME/Projects/music-organizer"
 
 compile() {
-    (cd "$src_path" && env SHELL=/usr/bin/zsh ./install.sh)
+    export PATH="$HOME/.cargo/bin:$PATH"
+    export SHELL=/usr/bin/zsh
+    (cd "$src_path" && ./install.sh)
 }
 
 install() {

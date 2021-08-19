@@ -3,7 +3,8 @@
 src_path="$HOME/Projects/comeondosomething"
 
 compile() {
-    (cd "$src_path" && env SHELL=/usr/bin/zsh cargo install --path cli)
+    export PATH="$HOME/.cargo/bin:$PATH"
+    (cd "$src_path" && cargo install --path cli)
 }
 
 install() {
