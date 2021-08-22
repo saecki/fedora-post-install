@@ -1,0 +1,48 @@
+## applications
+alacritty
+arduino
+blender
+cantata
+dmenu
+exfalso
+geary
+gimp
+gnome-builder
+gnome-calendar
+gnome-extensions-app
+gnome-tweaks
+hplip-gui
+inkscape
+kvantum
+libreoffice-draw
+lutris
+picard
+prusa-slicer
+quodlibet
+vlc
+wine
+
+## extensions
+gnome-shell-extension-user-theme
+gnome-shell-extension-dash-to-dock
+gnome-shell-extension-gsconnect
+gnome-shell-extension-topicons-plus
+gnome-shell-extension-bubblemail
+bubblemail
+gnome-shell-extension-gamemode
+gamemode
+
+## gtk
+gtk3-devel
+gtk4-devel
+
+## discord libs
+libatomic
+
+## miscellaneous
+fontawesome-fonts
+fontconfig-devel
+freetype-devel
+texlive
+xcursorgen
+xkill

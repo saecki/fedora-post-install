@@ -51,4 +51,5 @@ update() {
     install
 }
 
-. "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
+. "$(dirname $(dirname $(dirname $(realpath $0))))/util/manage.sh"
+

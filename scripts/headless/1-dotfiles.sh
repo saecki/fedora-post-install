@@ -12,5 +12,5 @@ update() {
     git --work-tree="$HOME" --git-dir="$git_dir" checkout -f
 }
 
-. "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
+. "$(dirname $(dirname $(dirname $(realpath $0))))/util/manage.sh"
 

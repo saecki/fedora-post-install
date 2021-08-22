@@ -1,44 +1,10 @@
-## applications
-alacritty
-arduino
-blender
-cantata
-dmenu
-exfalso
-ffmpeg
-geary
-gimp
-gnome-builder
-gnome-calendar
-gnome-extensions-app
-gnome-tweaks
-hplip-gui
-inkscape
-kvantum
-libreoffice-draw
-lutris
-picard
-prusa-slicer
-quodlibet
-vlc
-wine
-
-## extensions
-gnome-shell-extension-user-theme
-gnome-shell-extension-dash-to-dock
-gnome-shell-extension-gsconnect
-gnome-shell-extension-topicons-plus
-gnome-shell-extension-bubblemail
-bubblemail
-gnome-shell-extension-gamemode
-gamemode
-
 ## command-line
 AtomicParsley
 asciiquarium
 bat
 cmatrix
 cmus
+ffmpeg
 cowsay
 dconf
 exa
@@ -92,16 +58,6 @@ python3-devel
 # go
 golang
 
-## st libs
-libX11-devel
-libXft-devel
-
-## discord libs
-libatomic
-
-## gtk
-gtk3-devel
-
 ## hp printers
 hplip
 hplip-common
@@ -113,15 +69,10 @@ exfat-utils
 expect
 ffmpeg-devel
 ffmpeg-libs
-fontawesome-fonts
-fontconfig-devel
-freetype-devel
+g++
 kernel-devel
 libxcb-devel
 openssl-devel
-python3-dnf-plugin-system-upgrade
+dnf-plugin-system-upgrade
 python3-neovim
-texlive
 tlp
-xkill
-xcursorgen

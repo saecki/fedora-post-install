@@ -38,4 +38,5 @@ update() {
     echo "Let teamspeak update itself or reinstall it"
 }
 
-. "$(dirname $(dirname $(realpath $0)))/util/manage.sh"
+. "$(dirname $(dirname $(dirname $(realpath $0))))/util/manage.sh"
+
