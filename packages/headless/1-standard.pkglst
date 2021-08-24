@@ -59,6 +59,11 @@ python3-devel
 # go
 golang
 
+# lua
+lua
+lua-devel
+luarocks
+
 ## hp printers
 hplip
 hplip-common
