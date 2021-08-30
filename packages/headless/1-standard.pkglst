@@ -64,18 +64,21 @@ lua
 lua-devel
 luarocks
 
+# C/C++
+libstdc++-devel
+libstdc++-static
+ccls
+
 ## hp printers
 hplip
 hplip-common
 hplip-libs
 
 ## miscellaneous
-ccls
 exfat-utils
 expect
 ffmpeg-devel
 ffmpeg-libs
-g++
 kernel-devel
 libxcb-devel
 openssl-devel
