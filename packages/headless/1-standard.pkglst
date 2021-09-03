@@ -65,9 +65,10 @@ lua-devel
 luarocks
 
 # C/C++
+ccls
+cmake
 libstdc++-devel
 libstdc++-static
-ccls
 
 ## hp printers
 hplip
