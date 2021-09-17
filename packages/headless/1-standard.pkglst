@@ -4,11 +4,11 @@ asciiquarium
 bat
 cmatrix
 cmus
-ffmpeg
 cowsay
 dconf
 exa
 fd-find
+ffmpeg
 figlet
 fortune-mod
 fzf
@@ -32,6 +32,7 @@ the_silver_searcher
 tmux
 vifm
 vim
+youtube-dl
 zsh
 zsh-syntax-highlighting
 
