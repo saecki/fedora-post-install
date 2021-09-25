@@ -10,6 +10,7 @@ install() {
 
     sudo /usr/local/bin/create-desktop-file \
     -e /opt/Discord/Discord \
+    -s discord \
     -n Discord \
     -g com.discordapp.Discord
 }
