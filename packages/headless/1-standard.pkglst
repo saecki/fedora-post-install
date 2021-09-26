@@ -71,6 +71,10 @@ cmake
 libstdc++-devel
 libstdc++-static
 
+# lldb
+lldb
+rust-lldb
+
 ## hp printers
 hplip
 hplip-common
