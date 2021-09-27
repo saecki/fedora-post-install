@@ -14,7 +14,7 @@ install() {
 }
 
 update() {
-    git -C "$src_path" pull origin master
+    git -C "$src_path" pull origin
     git -C "$src_path" submodule update --init --recursive
 
     compile

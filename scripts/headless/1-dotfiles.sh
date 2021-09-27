@@ -8,7 +8,7 @@ install() {
 }
 
 update() {
-    git --work-tree="$HOME" --git-dir="$git_dir" pull origin master
+    git --work-tree="$HOME" --git-dir="$git_dir" pull origin
     git --work-tree="$HOME" --git-dir="$git_dir" checkout -f
 }
 

@@ -15,7 +15,7 @@ install() {
 }
 
 update() {
-    git -C "$src_path" pull origin master
+    git -C "$src_path" pull origin
 
     compile
 }
