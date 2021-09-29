@@ -23,14 +23,9 @@ vlc
 wine
 
 ## extensions
-gnome-shell-extension-user-theme
-gnome-shell-extension-dash-to-dock
+gnome-shell-extension-appindicator
 gnome-shell-extension-gsconnect
-gnome-shell-extension-topicons-plus
-gnome-shell-extension-bubblemail
-bubblemail
-gnome-shell-extension-gamemode
-gamemode
+gnome-shell-extension-user-theme
 
 ## gtk
 gtk3-devel
@@ -40,6 +35,7 @@ gtk4-devel
 libatomic
 
 ## miscellaneous
+bubblemail
 fontawesome-fonts
 fontconfig-devel
 freetype-devel
