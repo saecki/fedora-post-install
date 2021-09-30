@@ -1,6 +1,6 @@
 #!/bin/bash
 
-src_path="$HOME/Projects/lua-language-server"
+src_path="$HOME/.local/share/nvim/lua-language-server"
 
 compile() {
     (cd "$src_path/3rd/luamake" && ./compile/install.sh)
