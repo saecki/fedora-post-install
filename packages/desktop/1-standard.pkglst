@@ -26,6 +26,7 @@ wine
 gnome-shell-extension-appindicator
 gnome-shell-extension-gsconnect
 gnome-shell-extension-user-theme
+gnome-shell-extension-sound-output-device-chooser
 
 ## gtk
 gtk3-devel
