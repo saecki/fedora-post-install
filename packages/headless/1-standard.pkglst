@@ -37,6 +37,18 @@ zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
 
+## latex
+latexmk
+texlive
+texlive-amsmath
+texlive-babel
+texlive-fancyhdr
+texlive-geometry
+texlive-isodate
+texlive-lastpage
+texlive-listingsutf8
+texlive-multirow
+
 ## software development toolchains
 # java
 java-1.8.0-openjdk
