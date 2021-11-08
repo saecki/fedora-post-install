@@ -21,6 +21,8 @@ prusa-slicer
 quodlibet
 vlc
 wine
+zathura
+zathura-pdf-mupdf
 
 ## extensions
 gnome-shell-extension-appindicator
