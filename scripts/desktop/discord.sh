@@ -9,7 +9,8 @@ install() {
     sudo tar xzf "$dl_dir/discord.tar.gz" -C /opt/
 
     sudo /usr/local/bin/create-desktop-file \
-    -e /opt/Discord/Discord \
+    -f Discord \
+    -e "/opt/Discord/Discord --no-sandbox" \
     -s discord \
     -n Discord \
     -g com.discordapp.Discord
