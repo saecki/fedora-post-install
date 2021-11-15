@@ -42,6 +42,7 @@ latexmk
 texlive
 texlive-amsmath
 texlive-babel
+texlive-datetime2
 texlive-fancyhdr
 texlive-geometry
 texlive-isodate
