@@ -49,6 +49,7 @@ texlive-geometry
 texlive-isodate
 texlive-lastpage
 texlive-listingsutf8
+texlive-minted
 texlive-multirow
 
 ## software development toolchains
