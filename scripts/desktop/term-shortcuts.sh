@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install() {
-    LAUNCHTERM="~/.local/bin/launch-alacritty"
+    LAUNCHTERM="~/.local/bin/launch-kitty"
 
     oldkeybindings=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
 
