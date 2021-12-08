@@ -38,12 +38,12 @@ install() {
 
     keybindingpath="org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$keybinding"
     gsettings set $keybindingpath name "'Launch terminal'"
-    gsettings set $keybindingpath command "'$LAUNCHTERM -t \"magic box\"'"
+    gsettings set $keybindingpath command "'$LAUNCHTERM -T \"magic box\"'"
     gsettings set $keybindingpath binding "'<Super><Shift>Return'"
 
     tmuxkeybindingpath="org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$tmuxkeybinding"
     gsettings set $tmuxkeybindingpath name "'Launch terminal tmux'"
-    gsettings set $tmuxkeybindingpath command "'$LAUNCHTERM -t \"magic box\" -e tmux'"
+    gsettings set $tmuxkeybindingpath command "'$LAUNCHTERM -T \"magic box\" -e tmux'"
     gsettings set $tmuxkeybindingpath binding "'<Super>Return'"
 }
 
