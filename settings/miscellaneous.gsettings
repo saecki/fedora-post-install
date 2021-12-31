@@ -5,6 +5,9 @@ org.gnome.desktop.peripherals.touchpad tap-to-click true
 # Mouse
 org.gnome.desktop.peripherals.mouse.accel-profile 'flat'
 
+# Hot corner
+org.gnome.desktop.interface enable-hot-corners false
+
 # Top bar
 org.gnome.desktop.interface show-battery-percentage true
 org.gnome.desktop.interface clock-show-seconds true
