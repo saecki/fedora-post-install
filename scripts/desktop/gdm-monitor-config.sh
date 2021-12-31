@@ -5,7 +5,8 @@ install() {
 }
 
 update() {
-    echo "No need to update the monitor config"
+    sudo rm /var/lib/gdm/.config/
+    sudo ln "$HOME/.config/monitors.xml" /var/lib/gdm/.config/
 }
 
 . "$(dirname $(dirname $(dirname $(realpath $0))))/util/manage.sh"
