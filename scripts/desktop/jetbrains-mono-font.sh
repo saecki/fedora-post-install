@@ -6,6 +6,7 @@ install() {
     wget -O "$dl_dir/jbmono.zip" https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 
     rm -rf ~/.local/share/fonts/JetBrainsMono
+    mkdir -p ~/.local/share/fonts
     unzip "$dl_dir/jbmono" -d ~/.local/share/fonts/JetBrainsMono
 }
 
