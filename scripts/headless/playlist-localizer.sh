@@ -1,6 +1,6 @@
 #!/bin/bash
 
-src_path="$HOME/Projects/playlist_localizer"
+src_path="$HOME/Projects/playlist-localizer"
 
 compile() {
     export PATH="$HOME/.cargo/bin:$PATH"
@@ -9,7 +9,7 @@ compile() {
 }
 
 install() {
-    git clone git@github.com:Saecki/playlist_localizer "$src_path"
+    git clone git@github.com:Saecki/playlist-localizer "$src_path"
     
     compile
 }
