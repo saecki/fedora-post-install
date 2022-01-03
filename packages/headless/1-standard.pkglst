@@ -52,7 +52,12 @@ texlive-listings
 texlive-listingsutf8
 texlive-multirow
 
-## software development toolchains
+## toolchains
+# rust
+cargo
+clippy
+rustfmt
+
 # java
 java-1.8.0-openjdk
 java-1.8.0-openjdk-devel
