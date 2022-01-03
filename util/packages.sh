@@ -28,6 +28,14 @@ for file in "$@"; do
                 cargo install $line
             fi
         done < "$file"
+    elif [[ $file == *.luarocks ]]; then
+        echo -e "\ninstalling $file:"
+        while read -r line; do
+            if [[ $line != "" ]] && [[ $line != "#"* ]]; then
+                echo -e "\ninstalling \"$line\":"
+                sudo luarocks install $line
+            fi
+        done < "$file"
     elif [[ $file == *.pip3 ]]; then
         while read -r line; do
             if [[ $line != "" ]] && [[ $line != "#"* ]]; then
