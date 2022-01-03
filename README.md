@@ -14,6 +14,7 @@ $$ Create a github ssh key
 
 ```.pkglst``` extensions for a list of packages that will be installed using dnf.  
 ```.grplst``` extensions for a list of package groups that will be installed using dnf.  
+```.cargo``` extensions for a list of crates.io packages that will be installed using cargo.  
 ```.pip3``` extensions for a list of pypi packages that will be installed using pip3.  
 
 ## scripts

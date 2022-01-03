@@ -20,9 +20,14 @@ for file in "$@"; do
                 sudo dnf group install -y --skip-broken "$line"
             fi
         done < "$file"
-
-
-        packages=""
+    elif [[ $file == *.cargo ]]; then
+        echo -e "\ninstalling $file:"
+        while read -r line; do
+            if [[ $line != "" ]] && [[ $line != "#"* ]]; then
+                echo -e "\ninstalling \"$line\":"
+                cargo install $line
+            fi
+        done < "$file"
     elif [[ $file == *.pip3 ]]; then
         while read -r line; do
             if [[ $line != "" ]] && [[ $line != "#"* ]]; then
