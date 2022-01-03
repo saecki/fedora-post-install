@@ -54,6 +54,7 @@ texlive-multirow
 
 ## toolchains
 # rust
+rust-src
 cargo
 clippy
 rustfmt
