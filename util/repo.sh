@@ -20,16 +20,26 @@ for file in "$@"; do
         packages=""
     fi
 
-    if [[ "$file" == *.sh ]]; then
-        echo -e "\ninstalling repo $file:"
-        sudo $file
-    fi
-
     if [[ $file == *.copr ]]; then
         echo -e "\nenabling copr repo $file:"
         while read -r line; do
             if [[ $line != "" ]] && [[ $line != "#"* ]]; then
                 sudo dnf copr enable -y "$line"
+            fi
+        done < "$file"
+    fi
+
+    if [[ "$file" == *.sh ]]; then
+        echo -e "\ninstalling repo $file:"
+        sudo $file
+    fi
+
+    if [[ $file == *.flatpak ]]; then
+        echo -e "\nadding flatpak remotes $file:"
+        while read -r line; do
+            if [[ $line != "" ]] && [[ $line != "#"* ]]; then
+                echo -e "\nadding flatpak remote $line"
+                flatpak remote-add --if-not-exists $line
             fi
         done < "$file"
     fi
