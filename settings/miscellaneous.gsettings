@@ -2,9 +2,6 @@
 org.gnome.desktop.peripherals.touchpad click-method 'areas'
 org.gnome.desktop.peripherals.touchpad tap-to-click true
 
-# Mouse
-org.gnome.desktop.peripherals.mouse.accel-profile 'flat'
-
 # Hot corner
 org.gnome.desktop.interface enable-hot-corners false
 
