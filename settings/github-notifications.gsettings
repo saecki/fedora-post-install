@@ -1,5 +1,0 @@
-schemadir:$HOME/.local/share/gnome-shell/extensions/github.notifications@alexandre.dufournet.gmail.com/schemas
-
-org.gnome.shell.extensions.github.notifications show-alert true
-org.gnome.shell.extensions.github.notifications hide-widget true
-
