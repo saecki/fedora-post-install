@@ -25,3 +25,5 @@ org.gnome.desktop.input-sources sources [('xkb','us+altgr-intl'),('xkb','de')]
 # Power
 org.gnome.settings-daemon.plugins.power power-button-action 'nothing'
 
+# Software
+org.gnome.software packaging-format-preference ['RPM','flatpak']
