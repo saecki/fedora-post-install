@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 is_desktop() {
     [ "$XDG_SESSION_TYPE" == "wayland" ] || [ "$XDG_SESSION_TYPE" == "x11" ]
@@ -57,38 +57,38 @@ install() {
     echo "Did you create a ssh key for github?"
     read
 
-    # update
     echo -e "\n## Update ##"
     sudo dnf upgrade --refresh -y
 
-    # repos
     echo -e "\n## Repos ##"
     repos
 
-    # packages
     echo -e "\n## Packages ##"
     packages
 
-    # scripts
     echo -e "\n## Scripts ##"
     scripts_install
 
-    # settings
     echo -e "\n## Settings ##"
     settings
 }
 
 update() {
-    # update
     echo -e "\n## Update ##"
     sudo dnf upgrade --refresh -y
+    
+    echo -e "\n## Repos ##"
+    repos
 
-    # scripts
+    echo -e "\n## Packages ##"
+    packages
+
     echo -e "\n## Scripts ##"
     scripts_update
+    
+    echo -e "\n## Settings ##"
+    settings
 }
-
-#!/bin/sh
 
 while getopts "hiprsu" opt; do
     case "$opt" in
