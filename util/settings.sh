@@ -1,14 +1,16 @@
-#!/bin/bash
+#!/bin/sh
+
+. "$(dirname $0)/print.sh"
 
 for file in "$@"; do
     if [[ $file == *.gsettings ]]; then
-        echo -e "\napplying settings from $file:"
+        heading2 "applying settings from $file"
 
         schemadir=""
         while read -r line; do
             if [[ $line == schemadir:* ]]; then 
                 schemadir=$(eval "echo ${line#schemadir:}")
-                echo "custom schemadir: $schemadir"
+                heading3 "custom schemadir: $schemadir"
             elif [[ $line != "" ]] && [[ $line != "#"* ]]; then
                 echo "$line"
 

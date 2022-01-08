@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 src_path="$HOME/Projects/comeondosomething"
 

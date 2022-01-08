@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 install() {
     sudo systemctl disable lvm2-monitor.service

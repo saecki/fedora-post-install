@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. "$(dirname $0)/util/print.sh"
+
 is_desktop() {
     [ "$XDG_SESSION_TYPE" == "wayland" ] || [ "$XDG_SESSION_TYPE" == "x11" ]
 }
@@ -9,11 +11,11 @@ repos() {
 }
 
 packages() {
-    echo "installing headless packages"
+    heading2 "installing headless packages"
     util/packages.sh packages/headless/*
 
     if is_desktop; then
-        echo "installing desktop packages"
+        heading2 "installing desktop packages"
         util/packages.sh packages/desktop/*
     fi
 }
@@ -27,28 +29,28 @@ settings() {
 exec_files() {
     for file in $1/*; do
         if [[ $file == *.sh ]]; then
-            echo -e "\nexecuting $file with $2:"
+            heading3 "\nexecuting $file with $2:"
             $file $2
         fi
     done
 }
 
 scripts_install() {
-    echo "installing headless scripts"
+    heading2 "installing headless scripts"
     exec_files "scripts/headless" -i
 
     if is_desktop; then
-        echo "installing desktop scripts"
+        heading2 "installing desktop scripts"
         exec_files "scripts/desktop" -i
     fi
 }
 
 scripts_update() {
-    echo "updating headless scripts"
+    heading2 "updating headless scripts"
     exec_files "scripts/headless" -u
 
     if is_desktop; then
-        echo "updating desktop scripts"
+        heading2 "updating desktop scripts"
         exec_files "scripts/desktop" -u
     fi
 }
@@ -57,36 +59,36 @@ install() {
     echo "Did you create a ssh key for github?"
     read
 
-    echo -e "\n## Update ##"
+    heading1 "Update"
     sudo dnf upgrade --refresh -y
 
-    echo -e "\n## Repos ##"
+    heading1 "Repos"
     repos
 
-    echo -e "\n## Packages ##"
+    heading1 "Packages"
     packages
 
-    echo -e "\n## Scripts ##"
+    heading1 "Scripts"
     scripts_install
 
-    echo -e "\n## Settings ##"
+    heading1 "Settings"
     settings
 }
 
 update() {
-    echo -e "\n## Update ##"
+    heading1 "Update"
     sudo dnf upgrade --refresh -y
     
-    echo -e "\n## Repos ##"
+    heading1 "Repos"
     repos
 
-    echo -e "\n## Packages ##"
+    heading1 "Packages"
     packages
 
-    echo -e "\n## Scripts ##"
+    heading1 "Scripts"
     scripts_update
     
-    echo -e "\n## Settings ##"
+    heading1 "Settings"
     settings
 }
 

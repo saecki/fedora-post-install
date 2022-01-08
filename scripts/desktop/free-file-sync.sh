@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 install() {
     vers=$(curl https://freefilesync.org/download.php | rg --no-filename \

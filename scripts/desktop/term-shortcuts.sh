@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 install() {
     LAUNCHTERM="~/.local/bin/launch-kitty"
