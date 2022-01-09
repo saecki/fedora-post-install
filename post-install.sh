@@ -7,10 +7,12 @@ is_desktop() {
 }
 
 repos() {
+    heading1 "Repos"
     util/repo.sh repos/*
 }
 
 packages() {
+    heading1 "Packages"
     heading2 "installing headless packages"
     util/packages.sh packages/headless/*
 
@@ -21,6 +23,7 @@ packages() {
 }
 
 settings() {
+    heading1 "Settings"
     if is_desktop; then
         util/settings.sh settings/*
     fi
@@ -36,6 +39,7 @@ exec_files() {
 }
 
 scripts_install() {
+    heading1 "Scripts"
     heading2 "installing headless scripts"
     exec_files "scripts/headless" -i
 
@@ -46,6 +50,7 @@ scripts_install() {
 }
 
 scripts_update() {
+    heading1 "Scripts"
     heading2 "updating headless scripts"
     exec_files "scripts/headless" -u
 
@@ -62,16 +67,9 @@ install() {
     heading1 "Update"
     sudo dnf upgrade --refresh -y
 
-    heading1 "Repos"
     repos
-
-    heading1 "Packages"
     packages
-
-    heading1 "Scripts"
     scripts_install
-
-    heading1 "Settings"
     settings
 }
 
@@ -79,16 +77,9 @@ update() {
     heading1 "Update"
     sudo dnf upgrade --refresh -y
     
-    heading1 "Repos"
     repos
-
-    heading1 "Packages"
     packages
-
-    heading1 "Scripts"
     scripts_update
-    
-    heading1 "Settings"
     settings
 }
 
@@ -105,9 +96,9 @@ done
 
 echo "
 Flags:
--r install repos
--p install packages
--s install settings
+-r repos
+-p packages
+-s settings
 -i run installation procedure
 -u run update procedure
 "
