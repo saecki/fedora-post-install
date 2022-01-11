@@ -61,6 +61,8 @@ scripts_update() {
 }
 
 install() {
+    install_heading
+
     echo "Did you create a ssh key for github?"
     read
 
@@ -74,6 +76,8 @@ install() {
 }
 
 update() {
+    update_heading
+
     heading1 "Update"
     sudo dnf upgrade --refresh -y
     
