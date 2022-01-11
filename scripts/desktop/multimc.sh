@@ -15,7 +15,7 @@ install() {
 }
 
 update() {
-    echo "Let MultiMC update itself or reinstall it"
+    echo "let MultiMC update itself"
 }
 
 . "$(dirname $(dirname $(dirname $(realpath $0))))/util/manage.sh"
