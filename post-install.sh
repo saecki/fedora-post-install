@@ -83,22 +83,26 @@ update() {
     settings
 }
 
-while getopts "hiprsu" opt; do
+help() {
+    echo "
+Flags:
+    -r repos
+    -p packages
+    -s settings
+    -i installation procedure
+    -u update procedure
+    "
+}
+
+while getopts "hrpsiu" opt; do
     case "$opt" in
     r ) repos; exit;;
     p ) packages; exit;;
     s ) settings; exit;;
     i ) install; exit;;
     u ) update; exit;;
-    * )
+    h ) help; exit;;
+    * ) help; exit 1;;
     esac
 done
 
-echo "
-Flags:
--r repos
--p packages
--s settings
--i run installation procedure
--u run update procedure
-"
