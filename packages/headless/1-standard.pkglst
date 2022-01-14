@@ -98,6 +98,9 @@ libstdc++-static
 lldb
 rust-lldb
 
+# node
+nodejs
+
 ## hp printers
 hplip
 hplip-common
