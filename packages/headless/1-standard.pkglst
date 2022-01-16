@@ -41,17 +41,7 @@ zsh-syntax-highlighting
 ## latex
 latexmk
 texlive
-texlive-scheme-small
-texlive-amsmath
-texlive-babel
-texlive-datetime2
-texlive-fancyhdr
-texlive-geometry
-texlive-isodate
-texlive-lastpage
-texlive-listings
-texlive-listingsutf8
-texlive-multirow
+texlive-scheme-full
 
 ## toolchains
 # rust
