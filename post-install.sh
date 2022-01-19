@@ -66,7 +66,7 @@ install() {
     echo "Did you create a ssh key for github?"
     read
 
-    heading1 "Update"
+    heading1 "Update packages"
     sudo dnf upgrade --refresh -y
 
     repos
@@ -78,7 +78,7 @@ install() {
 update() {
     update_heading
 
-    heading1 "Update"
+    heading1 "Update packages"
     sudo dnf upgrade --refresh -y
     
     repos
