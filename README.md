@@ -1,7 +1,7 @@
 # fedora-post-install
 A post install script for fedora.
 
-$$ Create a github ssh key
+## Create a github ssh key
 `ssh-keygen -t ed25519 -C "your_email@example.com"`
 
 ## repos
