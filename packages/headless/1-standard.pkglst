@@ -44,12 +44,6 @@ texlive
 texlive-scheme-full
 
 ## toolchains
-# rust
-rust-src
-cargo
-clippy
-rustfmt
-
 # java
 java-1.8.0-openjdk
 java-1.8.0-openjdk-devel
