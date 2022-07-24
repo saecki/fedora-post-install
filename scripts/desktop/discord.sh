@@ -13,7 +13,7 @@ install() {
     -e "/opt/Discord/Discord --no-sandbox" \
     -s discord \
     -n Discord \
-    -g com.discordapp.Discord
+    -i "/opt/Discord/discord.png"
 }
 
 update() {
