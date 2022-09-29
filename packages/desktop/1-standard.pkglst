@@ -29,7 +29,6 @@ zathura-pdf-mupdf
 ## extensions
 gnome-shell-extension-appindicator
 gnome-shell-extension-gsconnect
-gnome-shell-extension-sound-output-device-chooser
 
 ## gtk
 gtk3-devel
