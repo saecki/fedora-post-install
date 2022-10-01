@@ -26,7 +26,7 @@ install() {
 
     keybindingpath="org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$keybinding"
     gsettings set $keybindingpath name "'Toggle theme'"
-    gsettings set $keybindingpath command "'~/.local/bin/theme toggle'"
+    gsettings set $keybindingpath command "'$HOME/.local/bin/theme toggle'"
     gsettings set $keybindingpath binding "'<Super>t'"
 }
 

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 install() {
-    LAUNCHTERM="~/.local/bin/launch-kitty"
+    LAUNCHTERM="$HOME/.local/bin/launch-kitty"
 
     oldkeybindings=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
 
