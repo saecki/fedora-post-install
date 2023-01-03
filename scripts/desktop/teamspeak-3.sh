@@ -4,13 +4,13 @@ install() {
     dl_dir=$(mktemp -d)
     info=$(curl https://www.teamspeak.com/versions/client.json | jq -r '.linux.x86_64')
     url=$(echo "$info" | jq -r '.mirrors."teamspeak.com"')
-    
+
     wget -O "$dl_dir/teamspeak.run" "$url"
-    
+
     sudo rm -rf /opt/TeamSpeak3-Client-linux_amd64
 
     chmod +x "$dl_dir/teamspeak.run"
-   
+
     expect_commands="
     spawn $dl_dir/teamspeak.run
     sleep 1
@@ -23,15 +23,14 @@ install() {
 
     (cd "$dl_dir" && expect -c "${expect_commands//
     /;}")
-    
+
     sudo mv "$dl_dir/TeamSpeak3-Client-linux_amd64" /opt/
 
     sudo /usr/local/bin/create-desktop-file \
-	-e /opt/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh \
-	-n TeamSpeak \
-	-g com.teamspeak.TeamSpeak \
-	-f teamspeak3
-    
+    -e /opt/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh \
+    -n TeamSpeak \
+    -g com.teamspeak.TeamSpeak \
+    -f teamspeak3
 }
 
 update() {

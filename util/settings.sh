@@ -8,7 +8,7 @@ for file in "$@"; do
 
         schemadir=""
         while read -r line; do
-            if [[ $line == schemadir:* ]]; then 
+            if [[ $line == schemadir:* ]]; then
                 schemadir=$(eval "echo ${line#schemadir:}")
                 heading3 "custom schemadir: $schemadir"
             elif [[ $line != "" ]] && [[ $line != "#"* ]]; then

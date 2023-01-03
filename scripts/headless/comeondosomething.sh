@@ -10,7 +10,7 @@ compile() {
 
 install() {
     git clone git@github.com:Saecki/comeondosomething "$src_path"
-    
+
     compile
 }
 

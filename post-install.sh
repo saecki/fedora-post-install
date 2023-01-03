@@ -86,7 +86,7 @@ update() {
 
     heading1 "Update packages"
     sudo dnf upgrade --refresh -y
-    
+
     repos
     packages
     scripts_update

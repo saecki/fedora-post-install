@@ -6,7 +6,7 @@ install() {
     wget -O "$dl_dir/jbmono.zip" https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip
     unzip "$dl_dir/jbmono.zip" -d "$dl_dir/jbmono"
 
-    git clone git@github.com:saecki/corners "$dl_dir/corners" 
+    git clone git@github.com:saecki/corners "$dl_dir/corners"
 
     rm -rf "$HOME/.local/share/fonts/JetBrainsMono/*"
     mkdir -p "$HOME/.local/share/fonts/JetBrainsMono"

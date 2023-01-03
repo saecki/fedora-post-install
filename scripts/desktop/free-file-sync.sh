@@ -49,7 +49,7 @@ update() {
                 echo -e "\nunable to fetch version"
                 exit 1
             fi
-            
+
             if [[ "${BASH_REMATCH[1]}" != "$vers" ]]; then
                 echo -e "\ninstalling version $vers\n"
                 _install "$vers"
