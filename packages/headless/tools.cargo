@@ -3,5 +3,4 @@ cargo-expand
 flamegraph
 sccache --no-default-features
 stylua
-tree-sitter-cli
 yaydl --locked
