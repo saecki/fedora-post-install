@@ -8,6 +8,7 @@ cmus
 cowsay
 dconf
 exa
+fastfetch
 fd-find
 ffmpeg
 figlet
@@ -22,7 +23,6 @@ lolcat
 lsd
 ncdu
 ncmpcpp
-neofetch
 neovim
 nmap
 ranger
