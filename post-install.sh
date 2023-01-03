@@ -8,7 +8,13 @@ is_desktop() {
 
 repos() {
     heading1 "Repos"
-    util/repo.sh repos/*
+    heading2 "installing headless repositories"
+    util/repo.sh repos/headless/*
+
+    if is_desktop; then
+        heading2 "installing desktop repositories"
+        util/repo.sh repos/desktop/*
+    fi
 }
 
 packages() {
