@@ -3,7 +3,7 @@
 . "$(dirname $0)/util/print.sh"
 
 is_desktop() {
-    [ "$XDG_SESSION_TYPE" == "wayland" ] || [ "$XDG_SESSION_TYPE" == "x11" ]
+    [[ "$XDG_SESSION_TYPE" == "wayland" ]] || [[ "$XDG_SESSION_TYPE" == "x11" ]]
 }
 
 repos() {
