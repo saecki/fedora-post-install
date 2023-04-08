@@ -2,5 +2,6 @@ bacon
 cargo-expand
 flamegraph
 sccache --no-default-features
+starship
 stylua
 yaydl --locked
