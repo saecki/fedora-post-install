@@ -40,7 +40,7 @@ for file in "$@"; do
         while read -r line; do
             if [[ $line != "" ]] && [[ $line != "#"* ]]; then
                 heading3 "installing \"$line\":"
-                cargo install $line
+                cargo binstall -y $line
             fi
         done < "$file"
     fi

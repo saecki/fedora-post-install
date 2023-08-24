@@ -19,6 +19,16 @@ repos() {
 
 packages() {
     heading1 "Packages"
+    # make sure the rust toolchain and cargo-binstall are installed
+    if [! -f "$HOME/.cargo/bin/cargo"]; then
+        heading3 "\ninstalling rust"
+        ./scripts/headless/1-rustup.sh -i
+    fi
+    if [! -f "$HOME/.cargo/bin/cargo-binstall"]; then
+        heading3 "\ninstalling cargo-binstall"
+        ./scripts/headless/2-cargo-binstall.sh -i
+    fi
+
     heading2 "installing headless packages"
     util/packages.sh packages/headless/*
 
