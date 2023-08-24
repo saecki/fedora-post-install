@@ -1,7 +1,8 @@
 bacon
+cargo-binstall
 cargo-expand
+cross
 flamegraph
-sccache --no-default-features
+sccache
 starship
 stylua
-yaydl --locked
