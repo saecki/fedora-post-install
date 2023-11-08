@@ -5,8 +5,8 @@ install() {
 
     oldkeybindings=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
 
-    commas="${oldkeybindings//[^\']}"
-    amount="${#commas}"
+    quotes="${oldkeybindings//[^\']}"
+    amount="${#quotes}"
 
     if [[ $amount == "0" ]]; then
         oldkeybindings="["
