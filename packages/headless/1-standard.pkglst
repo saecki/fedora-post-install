@@ -41,7 +41,6 @@ zsh-syntax-highlighting
 ## latex
 latexmk
 texlive
-texlive-scheme-full
 
 ## toolchains
 # java
