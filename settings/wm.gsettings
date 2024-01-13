@@ -1,6 +1,3 @@
-# Preferences
-org.gnome.desktop.wm.preferences focus-new-window 'strict'
-
 # Tiling windows
 org.gnome.mutter.keybindings toggle-tiled-left ['<Super>h','<Super>Left']
 org.gnome.mutter.keybindings toggle-tiled-right ['<Super>l','<Super>Right']
