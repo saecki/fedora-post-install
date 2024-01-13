@@ -40,6 +40,6 @@ org.gnome.desktop.wm.keybindings show-desktop ['<Super>d']
 org.gnome.desktop.wm.keybindings toggle-above ['<Super>f']
 
 org.gnome.shell.keybindings toggle-overview []
-org.gnome.settings-daemon.plugins.media-keys screensaver ['<Super>s']
+org.gnome.settings-daemon.plugins.media-keys screensaver ['<Super>z']
 org.gnome.desktop.wm.keybindings toggle-fullscreen ['<Alt>F11']
 
