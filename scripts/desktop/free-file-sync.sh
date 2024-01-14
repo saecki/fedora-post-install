@@ -6,7 +6,7 @@ fetch_version() {
     echo "$vers"
 }
 
-_install() {
+download() {
     vers="$1"
     dl_dir=$(mktemp -d)
 
@@ -36,7 +36,7 @@ install() {
         echo -e "\ninstalling version $vers\n"
     fi
 
-    _install "$vers"
+    download "$vers"
 }
 
 update() {
@@ -44,17 +44,25 @@ update() {
         line=$(head -n 1 /opt/FreeFileSync/CHANGELOG)
         pat="^FreeFileSync (.*) \[[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}\]"
         if [[ "$line" =~ $pat ]]; then
-            vers=$(fetch_version)
-            if [[ $vers == "" ]]; then
-                echo -e "\nunable to fetch version"
+            local_vers="${BASH_REMATCH[1]}"
+            if [[ $local_vers == "" ]]; then
+                echo -e "\nunable to read local version"
                 exit 1
             fi
 
-            if [[ "${BASH_REMATCH[1]}" != "$vers" ]]; then
-                echo -e "\ninstalling version $vers\n"
-                _install "$vers"
+            newest_vers=$(fetch_version)
+            if [[ $newest_vers == "" ]]; then
+                echo -e "\nunable to fetch version"
+                exit 1
+            fi
+            echo "Local version: '$local_vers'"
+            echo "Newest version: '$newest_vers'"
+
+            if [[ "$local_vers" != "$newest_vers" ]]; then
+                echo -e "\ninstalling version $newest_vers\n"
+                download "$newest_vers"
             else
-                echo -e "\nversion $vers is already installed"
+                echo -e "\nversion $local_vers is already installed"
             fi
         else
             echo "couldn't read installed version"
