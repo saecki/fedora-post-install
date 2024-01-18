@@ -24,7 +24,7 @@ vlc
 wike
 wine
 zathura
-zathura-pdf-mupdf
+zathura-pdf-poppler
 
 ## extensions
 gnome-shell-extension-appindicator
