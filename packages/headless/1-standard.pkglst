@@ -7,7 +7,7 @@ cmatrix
 cmus
 cowsay
 dconf
-exa
+eza
 fastfetch
 fd-find
 ffmpeg
@@ -33,7 +33,7 @@ tree-sitter-cli
 tmux
 vifm
 vim
-youtube-dl
+yt-dlp
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
