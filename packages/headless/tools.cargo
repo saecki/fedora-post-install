@@ -3,8 +3,6 @@ cargo-binstall
 cargo-expand
 cross
 flamegraph
-sccache
 starship
-stylua
 yazi-fm
 --git https://github.com/typst/typst typst-cli

@@ -2,7 +2,6 @@
 AtomicParsley
 asciiquarium
 bat
-cloc
 cmatrix
 cmus
 cowsay
@@ -12,7 +11,6 @@ fastfetch
 fd-find
 ffmpeg
 figlet
-fortune-mod
 fzf
 git-delta
 git-subtree
@@ -83,11 +81,6 @@ rust-lldb
 
 # node
 nodejs
-
-## hp printers
-hplip
-hplip-common
-hplip-libs
 
 ## miscellaneous
 exfat-utils
