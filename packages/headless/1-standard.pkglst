@@ -87,6 +87,7 @@ exfat-utils
 expect
 ffmpeg-devel
 ffmpeg-libs
+fswatch
 kernel-devel
 libxcb-devel
 openssl-devel
