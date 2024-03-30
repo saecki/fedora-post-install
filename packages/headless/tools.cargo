@@ -1,6 +1,7 @@
 bacon --locked
 cargo-binstall
 cargo-expand
+cargo-sweep
 cross
 flamegraph
 starship
