@@ -1,5 +1,13 @@
 #!/bin/sh
 
+patch_and_move() {
+    FILENAME="$1"
+    INPUT_FILE="$dl_dir/jbmono/$FILENAME"
+    OUTPUT_FILE="$HOME/.local/share/fonts/JetBrainsMono/$FILENAME"
+
+    (cd "$dl_dir/corners" && $dl_dir/corners/patch "$INPUT_FILE" "$OUTPUT_FILE")
+}
+
 install() {
     dl_dir=$(mktemp -d)
 
@@ -11,11 +19,10 @@ install() {
     rm -rf "$HOME/.local/share/fonts/JetBrainsMono/*"
     mkdir -p "$HOME/.local/share/fonts/JetBrainsMono"
 
-    FILENAME="JetBrainsMonoNerdFont-Regular.ttf"
-    INPUT_FILE="$dl_dir/jbmono/$FILENAME"
-    OUTPUT_FILE="$HOME/.local/share/fonts/JetBrainsMono/$FILENAME"
-
-    (cd "$dl_dir/corners" && $dl_dir/corners/patch "$INPUT_FILE" "$OUTPUT_FILE")
+    patch_and_move "JetBrainsMonoNerdFont-Regular.ttf"
+    patch_and_move "JetBrainsMonoNerdFont-Medium.ttf"
+    patch_and_move "JetBrainsMonoNerdFont-SemiBold.ttf"
+    patch_and_move "JetBrainsMonoNerdFont-Bold.ttf"
 }
 
 update() {
