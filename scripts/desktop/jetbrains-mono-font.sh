@@ -11,7 +11,7 @@ patch_and_move() {
 install() {
     dl_dir=$(mktemp -d)
 
-    wget -O "$dl_dir/jbmono.zip" https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
+    wget -O "$dl_dir/jbmono.zip" https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
     unzip "$dl_dir/jbmono.zip" -d "$dl_dir/jbmono"
 
     git clone git@github.com:saecki/corners "$dl_dir/corners"
