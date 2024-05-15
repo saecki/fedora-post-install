@@ -13,6 +13,7 @@ ffmpeg
 figlet
 fzf
 git-delta
+git-lfs
 git-subtree
 hexedit
 htop
