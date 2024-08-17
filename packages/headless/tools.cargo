@@ -1,4 +1,5 @@
 bacon --locked
+bob-nvim
 cargo-binstall
 cargo-expand
 cargo-sweep
@@ -10,4 +11,3 @@ trunk
 wasm-bindgen-cli
 yazi-fm
 --git https://github.com/typst/typst typst-cli
---git https://github.com/MordechaiHadad/bob.git bob-nvim
