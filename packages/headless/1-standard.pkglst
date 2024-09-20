@@ -22,7 +22,6 @@ lolcat
 lsd
 ncdu
 ncmpcpp
-neovim
 nmap
 ranger
 ripgrep
@@ -53,6 +52,9 @@ java-11-openjdk-devel
 java-17-openjdk
 java-17-openjdk-devel
 
+java-21-openjdk
+java-21-openjdk-devel
+
 java-latest-openjdk
 java-latest-openjdk-devel
 
@@ -70,7 +72,6 @@ lua-devel
 luarocks
 
 # C/C++
-ccls
 cmake
 libstdc++-devel
 libstdc++-static
@@ -91,6 +92,4 @@ fswatch
 kernel-devel
 libxcb-devel
 openssl-devel
-dnf-plugin-system-upgrade
-python3-neovim
 tlp
