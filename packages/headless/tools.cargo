@@ -10,4 +10,4 @@ tree-sitter-cli
 trunk
 wasm-bindgen-cli
 yazi-fm
---git https://github.com/typst/typst typst-cli
+typst-cli
