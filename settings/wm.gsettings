@@ -38,5 +38,5 @@ org.gnome.desktop.wm.keybindings toggle-above ['<Super>f']
 
 org.gnome.shell.keybindings toggle-overview []
 org.gnome.settings-daemon.plugins.media-keys screensaver ['<Super>z']
+org.gnome.settings-daemon.plugins.media-keys shutdown ['<Control><Alt>Delete']
 org.gnome.desktop.wm.keybindings toggle-fullscreen ['<Alt>F11']
-
