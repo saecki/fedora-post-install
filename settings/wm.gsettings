@@ -23,8 +23,8 @@ org.gnome.desktop.wm.keybindings switch-to-workspace-left ['<Control><Super>h','
 org.gnome.desktop.wm.keybindings switch-to-workspace-right ['<Control><Super>l','<Control><Super>Right']
 
 # Switching windows
-org.gnome.desktop.wm.keybindings switch-applications []
-org.gnome.desktop.wm.keybindings switch-applications-backward []
+org.gnome.desktop.wm.keybindings switch-applications ['']
+org.gnome.desktop.wm.keybindings switch-applications-backward ['']
 org.gnome.desktop.wm.keybindings switch-windows ['<Alt>Tab']
 org.gnome.desktop.wm.keybindings switch-windows-backward ['<Shift><Alt>Tab']
 
@@ -36,8 +36,8 @@ org.gnome.desktop.wm.keybindings begin-move ['<Shift><Super>m']
 org.gnome.desktop.wm.keybindings show-desktop ['<Super>d']
 org.gnome.desktop.wm.keybindings toggle-above ['<Super>f']
 
-org.gnome.shell.keybindings toggle-overview []
+org.gnome.shell.keybindings toggle-overview ['']
 org.gnome.settings-daemon.plugins.media-keys screensaver ['<Super>z']
-org.gnome.settings-daemon.plugins.media-keys logout []
+org.gnome.settings-daemon.plugins.media-keys logout ['']
 org.gnome.settings-daemon.plugins.media-keys shutdown ['<Control><Alt>Delete']
 org.gnome.desktop.wm.keybindings toggle-fullscreen ['<Alt>F11']
