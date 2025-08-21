@@ -2,7 +2,6 @@ bacon --locked
 bob-nvim
 cargo-binstall
 cargo-expand
-cargo-sweep
 cross
 flamegraph
 starship
