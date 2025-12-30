@@ -2,7 +2,7 @@
 
 fetch_version() {
     vers=$(curl https://freefilesync.org/download.php | rg --no-filename \
-        -e "^(.*?)FreeFileSync_(.*?)_Linux.tar.gz(.*?)$" -r '$2')
+        -e "^(.*?)FreeFileSync_(.*?)_Linux_x86_64.tar.gz(.*?)$" -r '$2')
     echo "$vers"
 }
 
@@ -12,7 +12,7 @@ download() {
 
     sudo rm -rf /opt/FreeFileSync
 
-    wget -O "$dl_dir/FreeFileSync.tar.gz" "https://freefilesync.org/download/FreeFileSync_${vers}_Linux.tar.gz"
+    wget -O "$dl_dir/FreeFileSync.tar.gz" "https://freefilesync.org/download/FreeFileSync_${vers}_Linux_x86_64.tar.gz"
     tar xzf "$dl_dir/FreeFileSync.tar.gz" -C "$dl_dir"
 
     expect_commands="
