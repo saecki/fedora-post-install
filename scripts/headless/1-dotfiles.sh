@@ -3,7 +3,7 @@
 git_dir="$HOME/.config/dotfiles"
 
 install() {
-    git clone --bare git@github.com:Saecki/dotfiles "$git_dir"
+    git clone --bare git@github.com:saecki/dotfiles "$git_dir"
     git --work-tree="$HOME" --git-dir="$git_dir" checkout -f
 }
 

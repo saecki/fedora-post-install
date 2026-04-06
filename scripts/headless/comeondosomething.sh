@@ -9,7 +9,7 @@ compile() {
 }
 
 install() {
-    git clone git@github.com:Saecki/comeondosomething "$src_path"
+    git clone git@github.com:saecki/comeondosomething "$src_path"
 
     compile
 }

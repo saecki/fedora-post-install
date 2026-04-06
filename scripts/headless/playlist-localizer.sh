@@ -9,7 +9,7 @@ compile() {
 }
 
 install() {
-    git clone git@github.com:Saecki/playlist-localizer "$src_path"
+    git clone git@github.com:saecki/playlist-localizer "$src_path"
 
     compile
 }

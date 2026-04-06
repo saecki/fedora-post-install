@@ -9,7 +9,7 @@ compile() {
 }
 
 install() {
-    git clone git@github.com:Saecki/music-organizer "$src_path"
+    git clone git@github.com:saecki/music-organizer "$src_path"
 
     compile
 }
