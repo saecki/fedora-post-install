@@ -1,10 +1,8 @@
 ## applications
 alacritty
-arduino
 blender
 dconf-editor
 fontforge
-geary
 gimp
 gnome-builder
 gnome-calendar
@@ -13,11 +11,8 @@ gnome-tweaks
 inkscape
 kitty
 libreoffice-draw
-lutris
 mpv
 picard
-wike
-wine
 zathura
 zathura-pdf-poppler
 
