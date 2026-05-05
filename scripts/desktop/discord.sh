@@ -9,11 +9,12 @@ install() {
     sudo tar xzf "$dl_dir/discord.tar.gz" -C /opt/
 
     sudo /usr/local/bin/create-desktop-file \
-    -f Discord \
-    -e "/opt/Discord/Discord --no-sandbox" \
-    -s discord \
-    -n Discord \
-    -i "/opt/Discord/discord.png"
+    --filename Discord \
+    --name Discord \
+    --startup-wm-class discord \
+    --icon "/opt/Discord/discord.png" \
+    --exec "/opt/Discord/discord" \
+    --path "/opt/Discord/"
 }
 
 update() {
